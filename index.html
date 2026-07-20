@@ -202,9 +202,9 @@
   </article>
 
   <!-- Slider Navigation Controls -->
-  <div style="position:absolute;bottom:3rem;left:0;right:0;z-index:10;">
-    <div class="container flex items-center justify-between flex-wrap gap-3">
-      <div style="margin-left:auto;" class="flex gap-2">
+  <div style="position:absolute;bottom:3rem;left:0;right:0;z-index:10;pointer-events:none;">
+    <div class="container flex items-center justify-between flex-wrap gap-3" style="pointer-events:none;">
+      <div style="margin-left:auto;pointer-events:auto;" class="flex gap-2">
         <button class="slider-prev btn btn-icon" style="color:var(--ivory);border-color:rgba(255,253,247,0.3);background:rgba(255,253,247,0.08);backdrop-filter:blur(8px);" aria-label="Previous slide">←</button>
         <button class="slider-next btn btn-icon" style="color:var(--ivory);border-color:rgba(255,253,247,0.3);background:rgba(255,253,247,0.08);backdrop-filter:blur(8px);" aria-label="Next slide">→</button>
       </div>
@@ -224,12 +224,12 @@
   <div class="container">
     <div class="grid" style="grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
       <!-- Image Side -->
-      <div class="sr sr-left img-reveal" style="position:relative;">
-        <div class="img-overlay-wrap" style="aspect-ratio:4/5;border-radius:var(--radius-xl);">
+      <div class="sr sr-left" style="position:relative;">
+        <div class="img-overlay-wrap img-reveal" style="aspect-ratio:4/5;border-radius:var(--radius-xl);">
           <img src="assets/images/about_photographer_1784526634105.png" alt="Sophia Laurent — Lead Photographer at AURELLE Studio" loading="lazy" />
         </div>
         <!-- Gold accent card -->
-        <div class="glass-card" style="position:absolute;bottom:2rem;right:-2rem;padding:1.5rem 2rem;text-align:center;min-width:160px;">
+        <div class="glass-card" style="position:absolute;bottom:2rem;right:-2rem;padding:1.5rem 2rem;text-align:center;min-width:160px;z-index:3;">
           <div class="stat-number" style="font-size:2.5rem;" data-counter="12" data-suffix="+">0+</div>
           <div class="stat-label">Years of Artistry</div>
         </div>
@@ -329,18 +329,18 @@
       </article>
 
       <!-- Service Card 4 -->
-      <article class="sr card" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);overflow:hidden;transition:all var(--transition-med);">
-        <div class="img-overlay-wrap" style="aspect-ratio:4/3;">
+      <article class="sr card" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);overflow:hidden;transition:all var(--transition-med);display:flex;flex-direction:column;">
+        <div class="img-overlay-wrap" style="aspect-ratio:4/3;flex-shrink:0;">
           <img src="assets/images/portfolio_graduation_1_1784526592090.png" alt="Graduation Photography" loading="lazy" />
           <div class="img-overlay">
             <a href="services.html#graduation" class="btn btn-outline btn-sm" style="color:var(--ivory);border-color:var(--ivory);">Explore</a>
           </div>
         </div>
-        <div class="card-body">
-          <div class="badge" style="margin-bottom:0.875rem;">Graduation</div>
+        <div class="card-body" style="display:flex;flex-direction:column;flex-grow:1;">
+          <div class="badge" style="margin-bottom:0.875rem;align-self:flex-start;">Graduation</div>
           <h3 class="h4" style="margin-bottom:0.625rem;font-family:var(--font-serif);">Graduation Portraits</h3>
           <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7;margin-bottom:1.25rem;">Celebrate your achievement with confident, polished portraits that honor your milestone.</p>
-          <a href="services.html#graduation" class="read-more">Learn More →</a>
+          <a href="services.html#graduation" class="read-more" style="margin-top:auto;">Learn More →</a>
         </div>
       </article>
 
@@ -365,7 +365,7 @@
         <div style="font-size:3rem;margin-bottom:1.25rem;color:var(--gold);">✦</div>
         <h3 class="h4" style="color:var(--ivory);margin-bottom:0.75rem;font-family:var(--font-serif);">Custom Sessions</h3>
         <p style="color:rgba(255,253,247,0.65);font-size:0.9rem;line-height:1.7;margin-bottom:2rem;">Have a unique vision? We collaborate with you to create something entirely one-of-a-kind.</p>
-        <a href="contact.html" class="btn btn-outline" style="border-color:var(--gold);color:var(--gold);">Let's Talk</a>
+        <a href="contact.html" class="btn btn-outline">Let's Talk</a>
       </article>
 
     </div>
@@ -424,7 +424,7 @@
     </div>
 
     <div class="text-center sr" style="margin-top:3rem;">
-      <a href="gallery.html" class="btn btn-outline" style="border-color:var(--gold);color:var(--gold);">View Full Gallery</a>
+      <a href="gallery.html" class="btn btn-outline">View Full Gallery</a>
     </div>
   </div>
 </section>
@@ -548,9 +548,9 @@
       </div>
 
       <div class="cta-banner-btns">
-        <a href="services.html" class="btn btn-outline" style="border-color:rgba(212,175,55,0.5);color:rgba(255,253,247,0.8);">View Packages</a>
+        <a href="services.html" class="btn btn-outline">View Packages</a>
         <span style="color:rgba(255,253,247,0.3);font-size:0.875rem;">or</span>
-        <a href="tel:+15550100" class="btn btn-outline" style="border-color:rgba(212,175,55,0.5);color:rgba(255,253,247,0.8);display:inline-flex;align-items:center;gap:0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call Us</a>
+        <a href="tel:+15550100" class="btn btn-outline" style="display:inline-flex;align-items:center;gap:0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call Us</a>
       </div>
 
       <!-- Availability indicators -->

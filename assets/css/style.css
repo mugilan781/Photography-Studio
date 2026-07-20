@@ -64,6 +64,8 @@
   --z-sticky: 200;
   --z-modal: 500;
   --z-toast: 900;
+
+  --stat-label-color: var(--text-secondary);
 }
 
 /* ── Dark Mode ───────────────────────────────────────────── */
@@ -83,6 +85,7 @@
   --glass-bg: rgba(26, 34, 51, 0.80);
   --glass-border: rgba(212, 175, 55, 0.20);
   --nav-bg: rgba(12, 16, 23, 0.95);
+  --stat-label-color: rgba(255, 253, 247, 0.5);
 }
 
 /* ── Reset & Base ────────────────────────────────────────── */
@@ -437,6 +440,10 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--gold);
   box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12);
   background: var(--bg-primary);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
 }
 
 .form-control::placeholder {
@@ -1078,6 +1085,7 @@ li:hover > .nav-dropdown {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   z-index: 5;
+  pointer-events: none;
 }
 
 .scroll-line {
@@ -1284,7 +1292,7 @@ li:hover > .nav-dropdown {
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--stat-label-color);
 }
 
 /* ── FAQ ─────────────────────────────────────────────────── */
@@ -1649,6 +1657,17 @@ li:hover > .nav-dropdown {
   flex-wrap: wrap;
 }
 
+.cta-banner-btns .btn-outline {
+  border-color: rgba(212, 175, 55, 0.5);
+  color: rgba(255, 253, 247, 0.8);
+}
+
+.cta-banner-btns .btn-outline:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--midnight);
+}
+
 /* ── Contact Info Card ───────────────────────────────────── */
 .info-card {
   background: var(--bg-card);
@@ -1994,7 +2013,7 @@ li:hover > .nav-dropdown {
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(255,253,247,0.5);
+  color: var(--stat-label-color);
 }
 
 /* ── Specialty / Hover Image Grid ───────────────────────── */

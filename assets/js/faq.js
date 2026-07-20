@@ -175,35 +175,55 @@ class TestimonialsCarousel {
 
   navigate(dir) {
     const max = Math.max(0, this.cards.length - this.visibleCount);
-    this.currentIndex = Math.max(0, Math.min(this.currentIndex + dir, max));
+    if (max === 0) return;
+    
+    let newIndex = this.currentIndex + dir;
+    if (newIndex < 0) {
+      newIndex = max;
+    } else if (newIndex > max) {
+      newIndex = 0;
+    }
+    
+    this.currentIndex = newIndex;
     this.updateTrack();
     this.resetAutoplay();
   }
 
   goTo(index) {
     const max = Math.max(0, this.cards.length - this.visibleCount);
-    this.currentIndex = Math.max(0, Math.min(index, max));
+    const cardIndex = this.dots.length > 1 ? Math.round((index / (this.dots.length - 1)) * max) : 0;
+    this.currentIndex = Math.max(0, Math.min(cardIndex, max));
     this.updateTrack();
+    this.resetAutoplay();
   }
 
   updateTrack() {
     if (!this.track) return;
-    const cardWidth = this.track.offsetWidth / this.visibleCount;
-    const offset = this.currentIndex * cardWidth;
-    this.track.style.transform = `translateX(-${offset}px)`;
+    const containerWidth = this.track.parentElement.offsetWidth;
+    const gap = parseFloat(getComputedStyle(this.track).gap) || 24;
+    const cardWidth = (containerWidth - gap * (this.visibleCount - 1)) / this.visibleCount;
 
-    this.dots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === this.currentIndex);
+    this.cards.forEach(card => {
+      card.style.flex = `0 0 ${cardWidth}px`;
+      card.style.width = `${cardWidth}px`;
+      card.style.minWidth = '0';
     });
 
-    if (this.prevBtn) this.prevBtn.disabled = this.currentIndex === 0;
-    if (this.nextBtn) this.nextBtn.disabled = this.currentIndex >= this.cards.length - this.visibleCount;
+    const offset = this.currentIndex * (cardWidth + gap);
+    this.track.style.transform = `translateX(-${offset}px)`;
+
+    const max = Math.max(0, this.cards.length - this.visibleCount);
+    this.dots.forEach((dot, i) => {
+      const activeIndex = max > 0 ? Math.round((this.currentIndex / max) * (this.dots.length - 1)) : 0;
+      dot.classList.toggle('active', i === activeIndex);
+    });
+
+    if (this.prevBtn) this.prevBtn.disabled = false;
+    if (this.nextBtn) this.nextBtn.disabled = false;
   }
 
   startAutoplay() {
     this.autoplayTimer = setInterval(() => {
-      const max = this.cards.length - this.visibleCount;
-      if (this.currentIndex >= max) this.currentIndex = -1;
       this.navigate(1);
     }, 5000);
   }

@@ -2632,3 +2632,15 @@ select.form-control { cursor: pointer; }
 html[data-theme="light"] .pillar-icon {
   color: var(--ivory);
 }
+
+/* Scoped overrides to improve contrast of badges on blog covers */
+.blog-card-img .badge {
+  background: rgba(12, 16, 23, 0.9) !important;
+  border-color: rgba(212, 175, 55, 0.4) !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.blog-card-img .badge-rose {
+  background: rgba(12, 16, 23, 0.9) !important;
+  border-color: rgba(216, 167, 177, 0.4) !important;
+}

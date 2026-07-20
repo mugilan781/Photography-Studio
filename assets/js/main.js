@@ -83,7 +83,7 @@ const html = document.documentElement;
 
 function applyTheme(theme) {
   html.setAttribute('data-theme', theme);
-  localStorage.setItem('lumiere-theme', theme);
+  localStorage.setItem('aurelle-theme', theme);
   if (themeIcon) {
     themeIcon.textContent = theme === 'dark' ? '☀' : '◑';
     themeToggle?.classList.toggle('active', theme === 'dark');
@@ -91,7 +91,7 @@ function applyTheme(theme) {
 }
 
 function initTheme() {
-  const saved = localStorage.getItem('lumiere-theme');
+  const saved = localStorage.getItem('aurelle-theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   applyTheme(saved || (prefersDark ? 'dark' : 'light'));
 }
@@ -110,7 +110,7 @@ const rtlToggle = document.getElementById('rtl-toggle');
 
 function applyDir(dir) {
   document.documentElement.dir = dir;
-  localStorage.setItem('lumiere-dir', dir);
+  localStorage.setItem('aurelle-dir', dir);
   if (rtlToggle) {
     rtlToggle.classList.toggle('active', dir === 'rtl');
     rtlToggle.title = dir === 'rtl' ? 'Switch to LTR' : 'Switch to RTL';
@@ -118,7 +118,7 @@ function applyDir(dir) {
 }
 
 function initDir() {
-  const saved = localStorage.getItem('lumiere-dir') || 'ltr';
+  const saved = localStorage.getItem('aurelle-dir') || 'ltr';
   applyDir(saved);
 }
 
@@ -388,5 +388,5 @@ function debounce(fn, delay) {
   };
 }
 
-window.LumiereUtils = { debounce, animateCounter };
+window.AURELLEUtils = { debounce, animateCounter };
 

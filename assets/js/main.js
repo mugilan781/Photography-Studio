@@ -47,11 +47,16 @@ if (navbar) {
 }
 
 // Active nav link
-const navLinks = document.querySelectorAll('.nav-menu a');
-const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+const navLinks = document.querySelectorAll('.nav-menu a, .mobile-menu nav a');
+let currentPath = window.location.pathname.split('/').pop() || 'index.html';
+if (currentPath === '') currentPath = 'index.html';
 navLinks.forEach(link => {
   const linkPath = link.getAttribute('href').split('/').pop();
-  if (linkPath === currentPath) link.classList.add('active');
+  if (linkPath === currentPath) {
+    link.classList.add('active');
+  } else {
+    link.classList.remove('active');
+  }
 });
 
 // ── Mobile Menu ───────────────────────────────────────────
@@ -72,7 +77,7 @@ if (hamburger) hamburger.addEventListener('click', () => toggleMobileMenu());
 if (mobileMenuClose) mobileMenuClose.addEventListener('click', () => toggleMobileMenu(false));
 
 // Close mobile menu on link click
-document.querySelectorAll('.mobile-menu a').forEach(link => {
+document.querySelectorAll('.mobile-menu nav a').forEach(link => {
   link.addEventListener('click', () => toggleMobileMenu(false));
 });
 
@@ -107,10 +112,14 @@ if (themeToggle) {
 
 // ── RTL Toggle ────────────────────────────────────────────
 const rtlToggle = document.getElementById('rtl-toggle');
+const rtlText = document.getElementById('rtl-text');
 
 function applyDir(dir) {
   document.documentElement.dir = dir;
   localStorage.setItem('aurelle-dir', dir);
+  if (rtlText) {
+    rtlText.textContent = dir.toUpperCase();
+  }
   if (rtlToggle) {
     rtlToggle.classList.toggle('active', dir === 'rtl');
     rtlToggle.title = dir === 'rtl' ? 'Switch to LTR' : 'Switch to RTL';
@@ -128,6 +137,25 @@ if (rtlToggle) {
   rtlToggle.addEventListener('click', () => {
     const current = document.documentElement.dir;
     applyDir(current === 'rtl' ? 'ltr' : 'rtl');
+  });
+}
+
+// ── Profile Dropdown Toggle ──────────────────────────────
+const profileToggle = document.getElementById('profile-toggle');
+const profileDropdown = document.querySelector('.profile-dropdown');
+
+if (profileToggle && profileDropdown) {
+  profileToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isShow = profileDropdown.classList.toggle('show');
+    profileToggle.setAttribute('aria-expanded', isShow);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!profileDropdown.contains(e.target) && !profileToggle.contains(e.target)) {
+      profileDropdown.classList.remove('show');
+      profileToggle.setAttribute('aria-expanded', 'false');
+    }
   });
 }
 

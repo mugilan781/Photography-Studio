@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Science of Perfect Studio Lighting — Lumière Studio Journal. How we achieve those signature cinematic shadows and dramatic highlights." />
+  <meta property="og:title" content="The Science of Perfect Studio Lighting — Lumière Journal" />
+  <title>The Science of Perfect Studio Lighting — Lumière Studio Journal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+  <style>
+    .article-body { max-width: 720px; margin-inline: auto; }
+    .article-body h2 { font-family: var(--font-serif); font-size: clamp(1.5rem,3vw,2rem); margin: 2.5rem 0 1rem; color: var(--text-primary); }
+    .article-body p { color: var(--text-secondary); line-height: 1.9; margin-bottom: 1.5rem; font-size: 1.0625rem; }
+    .article-body p:first-of-type::first-letter { font-family: var(--font-serif); font-size: 4.5rem; font-weight: 600; float: left; line-height: 0.75; margin: 0.1em 0.1em 0 0; color: var(--gold); }
+    .pull-quote { font-family: var(--font-serif); font-size: clamp(1.25rem,2.5vw,1.75rem); font-style: italic; color: var(--gold); border-left: 3px solid var(--gold); padding: 1.5rem 2rem; margin: 2.5rem 0; background: rgba(212,175,55,0.05); border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+    .article-body ul { list-style: disc; padding-left: 2rem; margin-bottom: 1.5rem; }
+    .article-body ul li { color: var(--text-secondary); margin-bottom: 0.5rem; line-height: 1.7; }
+  </style>
+</head>
+<body>
+
+<div id="preloader" aria-hidden="true"><div class="preloader-logo">Lumière <span>Studio</span></div><div class="preloader-bar"></div></div>
+<div class="mobile-menu" role="dialog" aria-modal="true"><button class="mobile-menu-close icon-btn" style="position:absolute;top:2rem;right:2rem;width:44px;height:44px;border-radius:50%;border:1px solid var(--border-color);font-size:1.25rem;">✕</button><nav><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></nav></div>
+
+<header id="navbar" role="banner">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-main">Lumière</span><span class="logo-sub">Photography Studio</span></a>
+    <nav><ul class="nav-menu"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="blog.html" class="active">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+    <div class="nav-actions"><div class="nav-toggle-group"><button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode"><span id="theme-icon">◑</span></button><button id="rtl-toggle" class="icon-btn" aria-label="Toggle RTL">⇄</button></div><a href="contact.html" class="btn btn-primary btn-sm">Book Now</a><button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button></div>
+  </div>
+</header>
+
+<!-- ══ SECTION 1: ARTICLE HERO ════════════════════════════ -->
+<section style="position:relative;min-height:70vh;display:flex;align-items:flex-end;padding-bottom:4rem;overflow:hidden;background:var(--midnight);" aria-label="Article hero" class="pt-nav">
+  <div style="position:absolute;inset:0;background-image:url('assets/images/blog_cover_1_1784526648219.png');background-size:cover;background-position:center;opacity:0.5;" data-parallax="0.2"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--midnight) 0%,rgba(17,24,39,0.3) 100%);"></div>
+  <div class="container" style="position:relative;z-index:2;">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html" style="color:rgba(255,253,247,0.6);">Home</a><span class="breadcrumb-sep">›</span><a href="blog.html" style="color:rgba(255,253,247,0.6);">Journal</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Studio Lighting</span></nav>
+    <div style="max-width:740px;margin-top:1.25rem;">
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.25rem;">
+        <span class="badge">Studio Tips</span>
+        <span style="font-size:0.8rem;color:rgba(255,253,247,0.5);">December 12, 2024</span>
+        <span style="font-size:0.8rem;color:rgba(255,253,247,0.5);">8 min read</span>
+      </div>
+      <h1 style="font-family:var(--font-serif);font-size:clamp(2rem,5vw,3.5rem);color:var(--ivory);font-weight:400;line-height:1.15;margin-bottom:1.25rem;">The Science of Perfect<br/><em style="color:var(--gold);">Studio Lighting</em></h1>
+      <p style="color:rgba(255,253,247,0.7);font-size:1.125rem;line-height:1.8;max-width:600px;">How we achieve those signature cinematic shadows and dramatic highlights that define the Lumière aesthetic — and the principles behind every great portrait.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 2: ARTICLE CONTENT ════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="article-body sr">
+      <p>Light is the language of photography. Before the subject, before the composition, before the edit — light determines everything. At Lumière Studio, we have spent over a decade obsessively studying, experimenting with, and mastering studio light in all its forms. This article shares the core principles that underpin every single portrait we create.</p>
+
+      <h2>Understanding Light Quality: Hard vs. Soft</h2>
+      <p>The most fundamental distinction in studio lighting is the difference between hard and soft light. Hard light — produced by small, direct sources like an uncovered strobe — creates sharp, well-defined shadows and a dramatic, high-contrast look. Think of the classic Hollywood glamour portrait: chiseled cheekbones, bold shadows, graphic lines. This is hard light at its finest.</p>
+      <p>Soft light, on the other hand, is produced by larger, diffused sources — large softboxes, octaboxes, or reflectors bounced off large white surfaces. Soft light wraps around the subject, minimizing texture and creating gradual transitions from highlight to shadow. For skin tones, particularly in newborn and family photography, soft light is almost always the preferred choice.</p>
+
+      <div class="pull-quote">"Light is the language of photography. Every great portrait begins with an understanding of how light sculpts the human face."</div>
+
+      <h2>The Five Classic Portrait Lighting Patterns</h2>
+      <p>Professional portrait photographers work with a relatively small set of foundational lighting patterns, each producing a distinctly different mood and character:</p>
+      <ul>
+        <li><strong>Rembrandt Lighting</strong> — Named after the master painter, this setup creates a small triangle of light on the shadow side of the face. It's dramatic, dimensional, and timeless.</li>
+        <li><strong>Loop Lighting</strong> — The most flattering all-purpose pattern. The main light is positioned slightly above and 30–45° to the side of the subject, creating a small shadow loop beneath the nose.</li>
+        <li><strong>Broad Lighting</strong> — The lit side of the face is turned toward the camera. This pattern widens the perceived size of the face and works well for narrower face shapes.</li>
+        <li><strong>Short Lighting</strong> — The opposite of broad lighting. The shadow side faces the camera, creating a slimming, more dramatic effect ideal for round or wider faces.</li>
+        <li><strong>Split Lighting</strong> — The light source is positioned exactly 90° to the side, splitting the face perfectly in half. Bold, graphic, and intensely dramatic.</li>
+      </ul>
+
+      <h2>Our Signature Lumière Setup</h2>
+      <p>For our signature editorial portrait look, we use a modified Rembrandt setup with a large 7-foot silver parabolic reflector as the main light, positioned at approximately 45° above and to the side of the subject at a distance of 6–8 feet. This creates beautiful specular highlights in the eyes while maintaining dramatic shadow falloff.</p>
+      <p>We then add a subtle fill card — a large white foam board — on the opposite side to control the shadow-to-highlight ratio, keeping it at approximately 3:1 for our standard portrait look. A rim light (a gridded strip light behind and above the subject) adds separation from the background and a subtle luminous halo to the hair.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 3: INLINE IMAGE GALLERY ════════════════════ -->
+<section style="padding-bottom:var(--section-py);">
+  <div class="container">
+    <div class="grid sr" style="grid-template-columns:2fr 1fr 1fr;gap:1rem;">
+      <div class="img-overlay-wrap" style="border-radius:var(--radius-lg);aspect-ratio:4/3;" data-lightbox="assets/images/portfolio_portrait_1_1784526541387.png" data-caption="Example of Rembrandt lighting — sharp shadows, dramatic depth">
+        <img src="assets/images/portfolio_portrait_1_1784526541387.png" alt="Rembrandt lighting example" loading="lazy" />
+        <div class="gallery-item-overlay"><div class="gallery-zoom-icon">⤢</div></div>
+      </div>
+      <div class="img-overlay-wrap" style="border-radius:var(--radius-lg);aspect-ratio:3/4;" data-lightbox="assets/images/portfolio_portrait_2_1784526622013.png" data-caption="Split lighting — bold and graphic portrait">
+        <img src="assets/images/portfolio_portrait_2_1784526622013.png" alt="Split lighting portrait" loading="lazy" />
+        <div class="gallery-item-overlay"><div class="gallery-zoom-icon">⤢</div></div>
+      </div>
+      <div class="img-overlay-wrap" style="border-radius:var(--radius-lg);aspect-ratio:3/4;" data-lightbox="assets/images/blog_cover_1_1784526648219.png" data-caption="Studio lighting equipment setup">
+        <img src="assets/images/blog_cover_1_1784526648219.png" alt="Studio lighting setup" loading="lazy" />
+        <div class="gallery-item-overlay"><div class="gallery-zoom-icon">⤢</div></div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:0.8rem;color:var(--text-muted);margin-top:1rem;font-style:italic;">Left to right: Rembrandt lighting, split lighting example, studio setup overview</p>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" tabindex="-1"><button class="lightbox-close">✕</button><button class="lightbox-nav lightbox-prev">←</button><img class="lightbox-img" src="" alt="" /><button class="lightbox-nav lightbox-next">→</button><div class="lightbox-counter"></div><p class="lightbox-caption" style="position:absolute;bottom:3.5rem;left:50%;transform:translateX(-50%);color:rgba(255,253,247,0.6);font-size:0.875rem;font-family:var(--font-serif);font-style:italic;"></p></div>
+
+<!-- ══ SECTION 4: AUTHOR BIO ══════════════════════════════ -->
+<section style="padding-bottom:var(--section-py);">
+  <div class="container">
+    <div class="sr" style="max-width:720px;margin-inline:auto;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-xl);padding:2.5rem;display:flex;gap:2rem;align-items:center;">
+      <div style="width:100px;height:100px;border-radius:50%;overflow:hidden;border:3px solid var(--gold);flex-shrink:0;">
+        <img src="assets/images/about_photographer_1784526634105.png" alt="Sophia Laurent" style="width:100%;height:100%;object-fit:cover;object-position:top;" />
+      </div>
+      <div>
+        <p style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Written by</p>
+        <h3 style="font-family:var(--font-serif);font-size:1.5rem;margin-bottom:0.5rem;">Sophia Laurent</h3>
+        <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.7;margin-bottom:1rem;">Founder & Lead Photographer at Lumière Studio. Award-winning portrait artist with 12+ years of experience. Speaker at PPA, WPPI, and PhotoPlus.</p>
+        <div class="flex gap-2">
+          <a href="about.html" class="btn btn-outline btn-sm">About Sophia</a>
+          <a href="#" class="btn btn-sm" style="border:1px solid var(--border-color);color:var(--text-muted);">📷 Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 5: RELATED POSTS ═══════════════════════════ -->
+<section class="section" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="section-header sr" style="margin-bottom:3rem;">
+      <p class="eyebrow">Continue Reading</p>
+      <h2 class="section-title">Related<br/><em style="font-style:italic;">Articles</em></h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="grid sr-stagger" style="grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+      <article class="sr blog-card">
+        <div class="blog-card-img"><img src="assets/images/blog_cover_2_1784526668707.png" alt="Camera lens guide" loading="lazy" /></div>
+        <div class="blog-card-body">
+          <div class="blog-meta"><span>Nov 28, 2024</span><span class="blog-meta-dot">·</span><span class="badge">Gear</span></div>
+          <h3 class="blog-card-title"><a href="blog-details.html">Choosing the Right Lens for Portrait Photography</a></h3>
+          <a href="blog-details.html" class="read-more">Read →</a>
+        </div>
+      </article>
+      <article class="sr blog-card">
+        <div class="blog-card-img"><img src="assets/images/blog_cover_3_1784526681799.png" alt="Newborn session" loading="lazy" /></div>
+        <div class="blog-card-body">
+          <div class="blog-meta"><span>Nov 5, 2024</span><span class="blog-meta-dot">·</span><span class="badge badge-rose">Newborn</span></div>
+          <h3 class="blog-card-title"><a href="blog-details.html">Behind the Scene: A Newborn Session Day</a></h3>
+          <a href="blog-details.html" class="read-more">Read →</a>
+        </div>
+      </article>
+      <article class="sr blog-card">
+        <div class="blog-card-img" style="background:linear-gradient(135deg,var(--midnight),var(--slate));aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;"><span style="font-family:var(--font-serif);font-size:3rem;color:var(--gold);opacity:0.3;">◎</span></div>
+        <div class="blog-card-body">
+          <div class="blog-meta"><span>Oct 8, 2024</span><span class="blog-meta-dot">·</span><span class="badge">Tips</span></div>
+          <h3 class="blog-card-title"><a href="blog-details.html">The Art of Directing Your Photography Clients</a></h3>
+          <a href="blog-details.html" class="read-more">Read →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 6: COMMENTS ════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="sr" style="max-width:720px;margin-inline:auto;">
+      <h2 style="font-family:var(--font-serif);font-size:2rem;margin-bottom:2.5rem;">Discussion <span style="font-size:1rem;color:var(--text-muted);font-family:var(--font-sans);font-weight:400;">(3 comments)</span></h2>
+
+      <!-- Existing comments -->
+      <div style="display:flex;flex-direction:column;gap:2rem;margin-bottom:3.5rem;">
+        <div style="display:flex;gap:1.25rem;">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--rose));display:flex;align-items:center;justify-content:center;color:var(--midnight);font-weight:700;flex-shrink:0;">J</div>
+          <div style="flex:1;">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:0.5rem;flex-wrap:wrap;">
+              <span style="font-weight:600;font-size:0.925rem;">James T.</span>
+              <span style="font-size:0.775rem;color:var(--text-muted);">Dec 14, 2024</span>
+              <div style="color:var(--gold);font-size:0.75rem;">★★★★★</div>
+            </div>
+            <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7;">This is exactly what I needed! The explanation of light quality vs light pattern is so clear. I've been confusing the two concepts for years.</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:1.25rem;">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--beige),var(--rose));display:flex;align-items:center;justify-content:center;color:var(--midnight);font-weight:700;flex-shrink:0;">A</div>
+          <div style="flex:1;">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:0.5rem;flex-wrap:wrap;">
+              <span style="font-weight:600;font-size:0.925rem;">Amelia K.</span>
+              <span style="font-size:0.775rem;color:var(--text-muted);">Dec 16, 2024</span>
+            </div>
+            <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7;">The description of the Lumière signature setup is so helpful. Would love to see a diagram of the modifier positions!</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:1.25rem;padding-left:3.5rem;border-left:2px solid rgba(212,175,55,0.2);">
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--midnight);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold);font-weight:700;flex-shrink:0;font-family:var(--font-serif);">S</div>
+          <div style="flex:1;">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:0.5rem;flex-wrap:wrap;">
+              <span style="font-weight:600;font-size:0.925rem;">Sophia Laurent <span class="badge" style="font-size:0.6rem;margin-left:0.25rem;">Author</span></span>
+              <span style="font-size:0.775rem;color:var(--text-muted);">Dec 17, 2024</span>
+            </div>
+            <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7;">Great idea, Amelia! I'll add a lighting diagram illustration to a follow-up post. Thank you for reading ✦</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comment form -->
+      <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:2.5rem;">
+        <h3 style="font-family:var(--font-serif);font-size:1.5rem;margin-bottom:1.75rem;">Leave a Comment</h3>
+        <form style="display:flex;flex-direction:column;gap:1.25rem;" onsubmit="event.preventDefault();this.innerHTML='<p style=\'text-align:center;color:var(--gold);font-family:var(--font-serif);font-size:1.125rem;padding:2rem;\'>✓ Thank you for your comment! It\'s awaiting moderation.</p>'">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div class="form-group"><label class="form-label" for="comment-name">Name *</label><input id="comment-name" class="form-control" type="text" placeholder="Your name" required /></div>
+            <div class="form-group"><label class="form-label" for="comment-email">Email *</label><input id="comment-email" class="form-control" type="email" placeholder="your@email.com" required /></div>
+          </div>
+          <div class="form-group"><label class="form-label" for="comment-text">Comment *</label><textarea id="comment-text" class="form-control" placeholder="Share your thoughts…" required></textarea></div>
+          <button type="submit" class="btn btn-primary" style="align-self:flex-start;">Post Comment</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div><a href="index.html" class="nav-logo footer-logo" style="display:inline-flex;margin-bottom:0;"><span class="logo-main">Lumière</span><span class="logo-sub">Photography Studio</span></a><p class="footer-desc">Award-winning portrait and family photography. Timeless imagery for generations.</p><div class="footer-social"><a href="#" class="social-link" aria-label="Instagram">📷</a><a href="#" class="social-link" aria-label="Facebook">f</a><a href="#" class="social-link" aria-label="Pinterest">P</a></div></div>
+      <nav><p class="footer-col-title">Navigation</p><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+      <nav><p class="footer-col-title">Sessions</p><ul class="footer-links"><li><a href="services.html#studio">Studio Portraits</a></li><li><a href="services.html#family">Family Sessions</a></li><li><a href="services.html#newborn">Newborn</a></li><li><a href="services.html#graduation">Graduation</a></li><li><a href="services.html#outdoor">Outdoor</a></li></ul></nav>
+      <div><p class="footer-col-title">Stay Inspired</p><form class="footer-newsletter newsletter-form"><input type="email" placeholder="Your email address" required /><button type="submit" class="btn btn-primary w-full">Subscribe</button></form></div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 Lumière Studio. All rights reserved.</span><div class="footer-bottom-links"><a href="privacy-policy.html">Privacy</a><a href="terms-conditions.html">Terms</a><a href="sitemap.html">Sitemap</a></div></div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top">↑</button>
+<div id="cookie-banner" role="dialog"><p class="cookie-text">We use cookies. <a href="privacy-policy.html">Learn more</a>.</p><div class="cookie-actions"><button id="cookie-decline" class="btn btn-sm" style="border:1px solid var(--border-color);color:var(--text-muted);">Decline</button><button id="cookie-accept" class="btn btn-primary btn-sm">Accept</button></div></div>
+
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/gallery.js" defer></script>
+</body>
+</html>

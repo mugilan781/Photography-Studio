@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Lumière Studio — Book your photography session, check date availability, and connect with our team. New York's premier portrait studio." />
+  <meta property="og:title" content="Contact & Book — Lumière Studio" />
+  <title>Contact & Book a Session — Lumière Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+</head>
+<body>
+
+<div id="preloader" aria-hidden="true"><div class="preloader-logo">Lumière <span>Studio</span></div><div class="preloader-bar"></div></div>
+<div class="mobile-menu" role="dialog" aria-modal="true"><button class="mobile-menu-close icon-btn" style="position:absolute;top:2rem;right:2rem;width:44px;height:44px;border-radius:50%;border:1px solid var(--border-color);font-size:1.25rem;">✕</button><nav><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></nav></div>
+
+<header id="navbar" role="banner">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-main">Lumière</span><span class="logo-sub">Photography Studio</span></a>
+    <nav><ul class="nav-menu"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html" class="active">Contact</a></li></ul></nav>
+    <div class="nav-actions"><div class="nav-toggle-group"><button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode"><span id="theme-icon">◑</span></button><button id="rtl-toggle" class="icon-btn" aria-label="Toggle RTL">⇄</button></div><a href="#booking" class="btn btn-primary btn-sm">Book Now</a><button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button></div>
+  </div>
+</header>
+
+<!-- ══ SECTION 1: CONTACT HERO ════════════════════════════ -->
+<section class="page-hero pt-nav" style="min-height:45vh;">
+  <div class="page-hero-bg" style="background:linear-gradient(135deg,var(--midnight) 0%,#1E2B3F 50%,#0C1A2E 100%);">
+    <!-- Abstract grid pattern -->
+    <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.08;" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0L0 0 0 60" fill="none" stroke="#D4AF37" stroke-width="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(#grid)"/></svg>
+  </div>
+  <div class="page-hero-overlay" style="background:linear-gradient(to top,rgba(17,24,39,0.9) 0%,rgba(17,24,39,0.2) 100%);"></div>
+  <div class="container page-hero-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Contact</span></nav>
+    <p class="eyebrow" style="margin-top:1rem;">Get in Touch</p>
+    <h1 class="page-title">Let's Create<br/><em style="color:var(--gold);">Something Beautiful</em></h1>
+    <p style="color:rgba(255,253,247,0.7);max-width:480px;margin-top:1rem;line-height:1.8;">Whether you have questions about our services or are ready to book — we'd love to hear from you.</p>
+  </div>
+</section>
+
+<!-- ══ SECTION 2: CONTACT INFO CARDS ═════════════════════ -->
+<section class="section" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="grid sr-stagger" style="grid-template-columns:repeat(4,1fr);gap:1.25rem;">
+      <div class="sr info-card">
+        <div class="info-card-icon">📍</div>
+        <div>
+          <p class="info-card-title">Studio Location</p>
+          <p class="info-card-text">42 Meridian Lane<br/>New York, NY 10001<br/>(Near Penn Station)</p>
+        </div>
+      </div>
+      <div class="sr info-card">
+        <div class="info-card-icon">☎</div>
+        <div>
+          <p class="info-card-title">Phone</p>
+          <p class="info-card-text"><a href="tel:+15550100" style="color:var(--text-secondary);">+1 (555) 010-0100</a><br/><span style="font-size:0.8rem;color:var(--text-muted);">Mon–Sat, 9am–6pm</span></p>
+        </div>
+      </div>
+      <div class="sr info-card">
+        <div class="info-card-icon">✉</div>
+        <div>
+          <p class="info-card-title">Email</p>
+          <p class="info-card-text"><a href="mailto:hello@lumierestudio.com" style="color:var(--text-secondary);">hello@lumierestudio.com</a><br/><span style="font-size:0.8rem;color:var(--text-muted);">Reply within 24 hours</span></p>
+        </div>
+      </div>
+      <div class="sr info-card">
+        <div class="info-card-icon">🕐</div>
+        <div>
+          <p class="info-card-title">Studio Hours</p>
+          <p class="info-card-text">Monday – Saturday<br/>9:00 AM – 6:00 PM<br/><span style="font-size:0.8rem;color:var(--text-muted);">By appointment only</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 3: DATE AVAILABILITY BOOKING ══════════════ -->
+<section class="section" id="booking">
+  <div class="container">
+    <div class="grid" style="grid-template-columns:1fr 1fr;gap:5rem;align-items:start;">
+      <!-- Left: intro -->
+      <div class="sr sr-left">
+        <p class="eyebrow eyebrow-left">Book Your Session</p>
+        <h2 class="h1 font-light" style="margin-bottom:1.5rem;">Reserve Your<br/><em style="font-style:italic;color:var(--gold);">Perfect Date</em></h2>
+        <div class="gold-line gold-line-left"></div>
+        <p style="color:var(--text-secondary);line-height:1.9;margin-bottom:1.5rem;">Choose your preferred session type and date below. We'll confirm availability and send a booking link within 2 business hours.</p>
+
+        <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem;">
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <span style="color:#4ade80;font-size:1.25rem;">●</span>
+            <span style="font-size:0.875rem;color:var(--text-secondary);">Available — select to book</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <span style="color:var(--gold);font-size:1.25rem;">●</span>
+            <span style="font-size:0.875rem;color:var(--text-secondary);">Limited spots — book soon</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <span style="color:var(--rose);font-size:1.25rem;">●</span>
+            <span style="font-size:0.875rem;color:var(--text-secondary);">Unavailable / Fully booked</span>
+          </div>
+        </div>
+
+        <!-- Session info -->
+        <div style="background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:1.75rem;">
+          <p style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">What to Expect</p>
+          <ul style="display:flex;flex-direction:column;gap:0.75rem;">
+            <li style="display:flex;gap:0.75rem;font-size:0.875rem;color:var(--text-secondary);">
+              <span style="color:var(--gold);flex-shrink:0;">01</span>
+              Select your session type and preferred date
+            </li>
+            <li style="display:flex;gap:0.75rem;font-size:0.875rem;color:var(--text-secondary);">
+              <span style="color:var(--gold);flex-shrink:0;">02</span>
+              Choose an available time slot
+            </li>
+            <li style="display:flex;gap:0.75rem;font-size:0.875rem;color:var(--text-secondary);">
+              <span style="color:var(--gold);flex-shrink:0;">03</span>
+              Fill in your details and submit
+            </li>
+            <li style="display:flex;gap:0.75rem;font-size:0.875rem;color:var(--text-secondary);">
+              <span style="color:var(--gold);flex-shrink:0;">04</span>
+              We'll confirm and send your booking link within 2 hours
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right: Booking widget -->
+      <div class="sr sr-right booking-widget" id="booking-widget-container">
+        <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-xl);padding:2.5rem;box-shadow:var(--shadow-md);">
+          <form id="booking-form" style="display:flex;flex-direction:column;gap:1.5rem;">
+            <div class="form-group">
+              <label class="form-label" for="booking-name">Full Name *</label>
+              <input id="booking-name" name="name" class="form-control" type="text" placeholder="Your full name" required />
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+              <div class="form-group">
+                <label class="form-label" for="booking-email">Email *</label>
+                <input id="booking-email" name="email" class="form-control" type="email" placeholder="your@email.com" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="booking-phone">Phone</label>
+                <input id="booking-phone" name="phone" class="form-control" type="tel" placeholder="+1 (555) 000-0000" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="booking-session">Session Type *</label>
+              <select id="booking-session" name="session" class="form-control" required>
+                <option value="">Select a session type…</option>
+                <option value="portrait">Studio Portrait — from $395</option>
+                <option value="family">Family Session — from $595</option>
+                <option value="newborn">Newborn Session — from $695</option>
+                <option value="graduation">Graduation Portrait — from $395</option>
+                <option value="outdoor">Outdoor / Location — from $495</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="booking-date">Preferred Date *</label>
+              <input id="booking-date" name="date" class="form-control" type="date" required />
+            </div>
+
+            <!-- Time slots (populated by JS) -->
+            <div id="time-slot-wrap" style="display:none;">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;">
+                <label class="form-label" style="margin:0;">Available Time Slots</label>
+                <span id="slots-label" style="font-size:0.775rem;color:var(--gold);"></span>
+              </div>
+              <div id="time-slots"></div>
+              <input type="hidden" id="selected-time" name="time" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="booking-notes">Notes / Questions</label>
+              <textarea id="booking-notes" name="notes" class="form-control" placeholder="Tell us about your vision, any special requirements, or questions…" style="min-height:100px;"></textarea>
+            </div>
+
+            <div style="padding:1rem;background:rgba(212,175,55,0.06);border:1px solid rgba(212,175,55,0.2);border-radius:var(--radius-md);font-size:0.8rem;color:var(--text-muted);">
+              🔒 Your information is secure and will never be shared. A 50% deposit is required to confirm your booking.
+            </div>
+
+            <button type="submit" id="booking-submit" class="btn btn-primary btn-lg w-full" style="text-align:center;">Request Booking</button>
+          </form>
+
+          <!-- Confirmation (hidden) -->
+          <div id="booking-confirm" style="display:none;text-align:center;padding:2rem 0;">
+            <div style="font-size:4rem;margin-bottom:1rem;color:var(--gold);">✦</div>
+            <h3 style="font-family:var(--font-serif);font-size:1.75rem;margin-bottom:0.75rem;">Thank You, <span data-confirm="name"></span>!</h3>
+            <p style="color:var(--text-secondary);margin-bottom:1.5rem;line-height:1.8;">Your booking request has been received. We'll confirm your session on <strong><span data-confirm="date"></span></strong> at <strong><span data-confirm="time"></span></strong> within 2 business hours.</p>
+            <a href="index.html" class="btn btn-primary">Return to Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 4: CONTACT FORM ════════════════════════════ -->
+<section class="section" style="background:var(--bg-secondary);" id="contact-form">
+  <div class="container">
+    <div class="section-header sr">
+      <p class="eyebrow">Send a Message</p>
+      <h2 class="section-title">Have a Question?<br/><em style="font-style:italic;">We're Here to Help</em></h2>
+      <div class="gold-line"></div>
+    </div>
+    <div style="max-width:700px;margin-inline:auto;">
+      <form class="contact-form sr" style="display:flex;flex-direction:column;gap:1.5rem;" aria-label="Contact form">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div class="form-group"><label class="form-label" for="cf-name">Full Name *</label><input id="cf-name" class="form-control" type="text" placeholder="Your name" required /></div>
+          <div class="form-group"><label class="form-label" for="cf-email">Email Address *</label><input id="cf-email" class="form-control" type="email" placeholder="your@email.com" required /></div>
+        </div>
+        <div class="form-group"><label class="form-label" for="cf-subject">Subject *</label>
+          <select id="cf-subject" class="form-control" required>
+            <option value="">Select a topic…</option>
+            <option>Pricing & Packages</option>
+            <option>Session Availability</option>
+            <option>Custom / Corporate Shoot</option>
+            <option>Print Products</option>
+            <option>General Inquiry</option>
+          </select>
+        </div>
+        <div class="form-group"><label class="form-label" for="cf-message">Message *</label><textarea id="cf-message" class="form-control" placeholder="Tell us how we can help…" required style="min-height:150px;"></textarea></div>
+        <button type="submit" class="btn btn-primary btn-lg" style="align-self:flex-start;">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 5: MAP ══════════════════════════════════════ -->
+<section style="height:420px;position:relative;overflow:hidden;">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.654321!2d-73.99355!3d40.75061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af15a81011%3A0x9b8d8b7f6c5c5f7a!2sPenn%20Station%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1234567890"
+    width="100%" height="100%" style="border:0;filter:grayscale(60%) contrast(1.1);"
+    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    title="Lumière Studio Location — 42 Meridian Lane, New York">
+  </iframe>
+  <!-- Overlay card -->
+  <div class="glass-card" style="position:absolute;top:50%;left:clamp(1rem,5vw,5rem);transform:translateY(-50%);padding:1.75rem 2rem;background:var(--bg-card);border:1px solid var(--border-color);min-width:240px;">
+    <p style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;">Our Studio</p>
+    <h3 style="font-family:var(--font-serif);font-size:1.25rem;margin-bottom:0.5rem;">Lumière Studio</h3>
+    <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6;">42 Meridian Lane<br/>New York, NY 10001</p>
+    <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="margin-top:1.25rem;display:inline-flex;">Get Directions</a>
+  </div>
+</section>
+
+<!-- ══ SECTION 6: FAQ QUICK LINKS ════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header sr" style="margin-bottom:3rem;">
+      <p class="eyebrow">Quick Answers</p>
+      <h2 class="section-title">Common<br/><em style="font-style:italic;">Questions</em></h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="faq-container sr" style="max-width:800px;margin-inline:auto;">
+      <div class="faq-item"><button class="faq-question">How far in advance should I book my session?<span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">We recommend 4–6 weeks in advance. For newborn sessions, book during your second trimester. <a href="services.html#faq" style="color:var(--gold);">See full FAQ →</a></div></div></div>
+      <div class="faq-item"><button class="faq-question">Do you offer outdoor sessions?<span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes! We offer outdoor sessions at locations across New York and the tri-state area. We handle all permits and scouting.</div></div></div>
+      <div class="faq-item"><button class="faq-question">What is included in each package?<span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">All packages include the session, professional editing, and a private online gallery. Higher tiers include makeup, prints, and albums. <a href="services.html#packages" style="color:var(--gold);">View packages →</a></div></div></div>
+      <div class="faq-item"><button class="faq-question">Can I reschedule my session?<span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes. Rescheduling is free with 48+ hours notice. We understand life happens and are always happy to accommodate you.</div></div></div>
+    </div>
+    <div class="text-center sr" style="margin-top:2.5rem;">
+      <a href="services.html#faq" class="btn btn-outline">View All FAQs</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div><a href="index.html" class="nav-logo footer-logo" style="display:inline-flex;margin-bottom:0;"><span class="logo-main">Lumière</span><span class="logo-sub">Photography Studio</span></a><p class="footer-desc">Award-winning portrait and family photography. Timeless imagery for generations.</p><div class="footer-social"><a href="#" class="social-link" aria-label="Instagram">📷</a><a href="#" class="social-link" aria-label="Facebook">f</a><a href="#" class="social-link" aria-label="Pinterest">P</a></div></div>
+      <nav><p class="footer-col-title">Navigation</p><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+      <nav><p class="footer-col-title">Sessions</p><ul class="footer-links"><li><a href="services.html#studio">Studio Portraits</a></li><li><a href="services.html#family">Family Sessions</a></li><li><a href="services.html#newborn">Newborn</a></li><li><a href="services.html#graduation">Graduation</a></li><li><a href="services.html#outdoor">Outdoor</a></li></ul></nav>
+      <div><p class="footer-col-title">Stay Inspired</p><form class="footer-newsletter newsletter-form"><input type="email" placeholder="Your email address" required /><button type="submit" class="btn btn-primary w-full">Subscribe</button></form></div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 Lumière Studio. All rights reserved.</span><div class="footer-bottom-links"><a href="privacy-policy.html">Privacy</a><a href="terms-conditions.html">Terms</a><a href="sitemap.html">Sitemap</a></div></div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top">↑</button>
+<div id="cookie-banner" role="dialog"><p class="cookie-text">We use cookies. <a href="privacy-policy.html">Learn more</a>.</p><div class="cookie-actions"><button id="cookie-decline" class="btn btn-sm" style="border:1px solid var(--border-color);color:var(--text-muted);">Decline</button><button id="cookie-accept" class="btn btn-primary btn-sm">Accept</button></div></div>
+
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/booking.js" defer></script>
+<script src="assets/js/faq.js" defer></script>
+
+<script>
+// Show time slot section when date is selected
+document.getElementById('booking-date')?.addEventListener('change', function() {
+  const wrap = document.getElementById('time-slot-wrap');
+  if (wrap && this.value) wrap.style.display = 'block';
+});
+// Pass URL date param to date input
+const urlDate = new URLSearchParams(window.location.search).get('date');
+if (urlDate) {
+  const input = document.getElementById('booking-date');
+  if (input) { input.value = urlDate; input.dispatchEvent(new Event('change')); }
+}
+</script>
+</body>
+</html>

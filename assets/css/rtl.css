@@ -1,0 +1,114 @@
+/* ============================================================
+   LUMIÈRE STUDIO — RTL (Right-to-Left) Support
+   Activated via: <html dir="rtl"> or data-dir="rtl"
+   ============================================================ */
+
+[dir="rtl"] {
+  /* ── Text Direction ────────────────────────────────────── */
+  text-align: right;
+
+  /* ── Eyebrow ───────────────────────────────────────────── */
+  .eyebrow { flex-direction: row-reverse; }
+  .eyebrow-left { flex-direction: row-reverse; justify-content: flex-end; }
+
+  /* ── Navbar ────────────────────────────────────────────── */
+  .nav-inner { flex-direction: row-reverse; }
+  .nav-menu { flex-direction: row-reverse; }
+  .nav-actions { flex-direction: row-reverse; }
+
+  .nav-dropdown {
+    left: auto;
+    right: 50%;
+    transform: translateX(50%) translateY(-8px);
+  }
+
+  li:hover > .nav-dropdown {
+    transform: translateX(50%) translateY(0);
+  }
+
+  .nav-dropdown::before {
+    left: auto;
+    right: 50%;
+    transform: translateX(50%) rotate(45deg);
+  }
+
+  /* ── Footer ────────────────────────────────────────────── */
+  .footer-grid { direction: rtl; }
+  .footer-links a::before { transform: rotate(180deg); }
+  .footer-links a:hover::before { transform: rotate(180deg) translateX(-4px); }
+  .footer-bottom { flex-direction: row-reverse; }
+  .footer-bottom-links { flex-direction: row-reverse; }
+  .footer-social { flex-direction: row-reverse; }
+
+  /* ── Cards ─────────────────────────────────────────────── */
+  .testimonial-card::before { left: auto; right: 1.75rem; }
+  .testimonial-author { flex-direction: row-reverse; }
+  .info-card { flex-direction: row-reverse; }
+
+  /* ── Breadcrumb ────────────────────────────────────────── */
+  .breadcrumb { flex-direction: row-reverse; }
+  .breadcrumb-sep { transform: scaleX(-1); }
+
+  /* ── Blog ──────────────────────────────────────────────── */
+  .blog-meta { flex-direction: row-reverse; }
+  .read-more { flex-direction: row-reverse; }
+
+  /* ── Pricing ───────────────────────────────────────────── */
+  .pricing-features li { flex-direction: row-reverse; }
+  .pricing-card.featured::before {
+    right: auto;
+    left: -2.25rem;
+    transform: rotate(-45deg);
+  }
+
+  /* ── FAQ ───────────────────────────────────────────────── */
+  .faq-question { flex-direction: row-reverse; text-align: right; }
+
+  /* ── Form Controls ─────────────────────────────────────── */
+  .form-control { text-align: right; }
+  select.form-control {
+    background-position: left 1.25rem center;
+    padding-left: 3rem;
+    padding-right: 1.25rem;
+  }
+
+  /* ── Filter Tabs ───────────────────────────────────────── */
+  .filter-tabs { flex-direction: row-reverse; }
+
+  /* ── Slider ────────────────────────────────────────────── */
+  .lightbox-prev { left: auto; right: 1.5rem; }
+  .lightbox-next { right: auto; left: 1.5rem; }
+
+  /* ── Back to Top ───────────────────────────────────────── */
+  #back-to-top { right: auto; left: 2rem; }
+
+  /* ── Mobile Menu ───────────────────────────────────────── */
+  .mobile-menu nav { align-items: flex-end; }
+
+  /* ── Gold Divider ──────────────────────────────────────── */
+  .gold-line-left { background: linear-gradient(270deg, var(--gold), transparent); }
+
+  /* ── Logo Sub ──────────────────────────────────────────── */
+  .nav-logo .logo-sub { letter-spacing: 0.1em; }
+
+  /* ── Marquee ───────────────────────────────────────────── */
+  .marquee-track { animation-name: marqueeScrollRTL; }
+
+  /* ── Stat Card ─────────────────────────────────────────── */
+  .stat-card { text-align: center; }
+
+  /* ── Time Slots ────────────────────────────────────────── */
+  .time-slots { direction: rtl; }
+}
+
+/* RTL-specific animation */
+@keyframes marqueeScrollRTL {
+  from { transform: translateX(0); }
+  to { transform: translateX(50%); }
+}
+
+/* ── RTL Toggle Button Active State ─────────────────────── */
+[dir="rtl"] #rtl-toggle {
+  background: var(--gold);
+  color: var(--midnight);
+}

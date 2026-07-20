@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Under Maintenance — Lumière Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+</head>
+<body>
+
+<div id="theme-toggle-wrap" style="position:fixed;top:1.5rem;right:1.5rem;z-index:10;">
+  <div class="nav-toggle-group">
+    <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode"><span id="theme-icon">◑</span></button>
+  </div>
+</div>
+
+<main style="min-height:100svh;display:flex;align-items:center;justify-content:center;background:var(--midnight);position:relative;overflow:hidden;">
+
+  <!-- Background pattern -->
+  <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;">
+    <div style="position:absolute;inset:0;background-image:url('assets/images/hero_slider_1_1784526483706.png');background-size:cover;background-position:center;opacity:0.08;"></div>
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(17,24,39,0.3) 0%,rgba(17,24,39,0.95) 100%);"></div>
+
+    <!-- Floating gold orbs -->
+    <div style="position:absolute;top:15%;left:10%;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(212,175,55,0.08) 0%,transparent 70%);animation:float 8s ease-in-out infinite;"></div>
+    <div style="position:absolute;bottom:20%;right:10%;width:250px;height:250px;border-radius:50%;background:radial-gradient(circle,rgba(216,167,177,0.06) 0%,transparent 70%);animation:float 10s ease-in-out infinite 2s;"></div>
+
+    <!-- Particles -->
+    <div class="particle" style="left:15%;animation-duration:14s;"></div>
+    <div class="particle" style="left:40%;animation-duration:18s;animation-delay:3s;background:var(--rose);"></div>
+    <div class="particle" style="left:70%;animation-duration:12s;animation-delay:6s;"></div>
+    <div class="particle" style="left:85%;animation-duration:16s;animation-delay:1s;background:var(--beige);"></div>
+  </div>
+
+  <div style="text-align:center;max-width:640px;padding:2rem;position:relative;z-index:2;">
+    <!-- Logo -->
+    <a href="index.html" style="display:inline-flex;flex-direction:column;align-items:center;margin-bottom:3rem;text-decoration:none;animation:fadeInDown 0.8s ease;">
+      <span style="font-family:var(--font-serif);font-size:2.5rem;color:var(--ivory);letter-spacing:0.04em;">Lumière</span>
+      <span style="font-size:0.6rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);">Photography Studio</span>
+    </a>
+
+    <!-- Gold divider -->
+    <div style="width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 auto 3rem;animation:fadeIn 0.8s ease 0.3s both;"></div>
+
+    <!-- Icon -->
+    <div style="font-size:4rem;margin-bottom:1.75rem;animation:float 6s ease-in-out infinite;display:inline-block;">✦</div>
+
+    <p class="eyebrow" style="color:var(--gold);justify-content:center;margin-bottom:1.25rem;animation:fadeInUp 0.8s ease 0.3s both;">Be Right Back</p>
+
+    <h1 style="font-family:var(--font-serif);font-size:clamp(2.25rem,5vw,3.5rem);color:var(--ivory);font-weight:300;margin-bottom:1.25rem;line-height:1.2;animation:fadeInUp 0.8s ease 0.4s both;">
+      We're Crafting<br/>Something <em style="font-style:italic;color:var(--gold);">Beautiful</em>
+    </h1>
+
+    <p style="color:rgba(255,253,247,0.6);font-size:1.0625rem;line-height:1.85;margin-bottom:3rem;animation:fadeInUp 0.8s ease 0.5s both;">
+      Our website is undergoing a few artistic improvements. We'll be back online very soon — even more beautiful than before. Thank you for your patience.
+    </p>
+
+    <!-- Countdown Timer -->
+    <div style="display:flex;align-items:center;justify-content:center;gap:2rem;margin-bottom:3.5rem;animation:fadeInUp 0.8s ease 0.6s both;">
+      <div style="text-align:center;">
+        <div id="countdown-days" style="font-family:var(--font-serif);font-size:3.5rem;font-weight:300;color:var(--gold);line-height:1;">00</div>
+        <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,253,247,0.4);margin-top:0.5rem;">Days</div>
+      </div>
+      <div style="color:rgba(212,175,55,0.4);font-size:2rem;font-weight:300;margin-top:-1.5rem;">:</div>
+      <div style="text-align:center;">
+        <div id="countdown-hours" style="font-family:var(--font-serif);font-size:3.5rem;font-weight:300;color:var(--gold);line-height:1;">00</div>
+        <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,253,247,0.4);margin-top:0.5rem;">Hours</div>
+      </div>
+      <div style="color:rgba(212,175,55,0.4);font-size:2rem;font-weight:300;margin-top:-1.5rem;">:</div>
+      <div style="text-align:center;">
+        <div id="countdown-mins" style="font-family:var(--font-serif);font-size:3.5rem;font-weight:300;color:var(--gold);line-height:1;">00</div>
+        <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,253,247,0.4);margin-top:0.5rem;">Minutes</div>
+      </div>
+      <div style="color:rgba(212,175,55,0.4);font-size:2rem;font-weight:300;margin-top:-1.5rem;">:</div>
+      <div style="text-align:center;">
+        <div id="countdown-secs" style="font-family:var(--font-serif);font-size:3.5rem;font-weight:300;color:var(--gold);line-height:1;">00</div>
+        <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,253,247,0.4);margin-top:0.5rem;">Seconds</div>
+      </div>
+    </div>
+
+    <!-- Notify form -->
+    <div style="animation:fadeInUp 0.8s ease 0.7s both;">
+      <p style="color:rgba(255,253,247,0.5);font-size:0.875rem;margin-bottom:1rem;">Get notified when we're back:</p>
+      <form style="display:flex;gap:0.75rem;max-width:420px;margin:0 auto 2.5rem;" onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:var(--gold);font-family:var(--font-serif);font-size:1rem;\'>✓ You\'re on the list!</p>'">
+        <input type="email" placeholder="your@email.com" required class="form-control" style="flex:1;background:rgba(255,253,247,0.08);border-color:rgba(212,175,55,0.25);color:var(--ivory);" />
+        <button type="submit" class="btn btn-primary" style="flex-shrink:0;">Notify Me</button>
+      </form>
+    </div>
+
+    <!-- Contact during maintenance -->
+    <div style="padding:1.5rem 2rem;background:rgba(255,253,247,0.04);border:1px solid rgba(212,175,55,0.15);border-radius:var(--radius-lg);animation:fadeInUp 0.8s ease 0.8s both;">
+      <p style="color:rgba(255,253,247,0.5);font-size:0.875rem;margin-bottom:0.75rem;">Need to reach us? We're still here:</p>
+      <div style="display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;">
+        <a href="tel:+15550100" style="color:var(--gold);font-size:0.875rem;">☎ +1 (555) 010-0100</a>
+        <a href="mailto:hello@lumierestudio.com" style="color:var(--gold);font-size:0.875rem;">✉ hello@lumierestudio.com</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="assets/js/main.js" defer></script>
+<script>
+// Countdown timer — set target date
+const targetDate = new Date();
+targetDate.setDate(targetDate.getDate() + 3); // 3 days from now
+
+function updateCountdown() {
+  const now = new Date();
+  const diff = Math.max(0, targetDate - now);
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+  document.getElementById('countdown-days').textContent = String(days).padStart(2, '0');
+  document.getElementById('countdown-hours').textContent = String(hours).padStart(2, '0');
+  document.getElementById('countdown-mins').textContent = String(mins).padStart(2, '0');
+  document.getElementById('countdown-secs').textContent = String(secs).padStart(2, '0');
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+</body>
+</html>

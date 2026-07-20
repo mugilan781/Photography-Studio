@@ -38,7 +38,6 @@
   .footer-links a:hover::before { transform: rotate(180deg) translateX(-4px); }
   .footer-bottom { flex-direction: row-reverse; }
   .footer-bottom-links { flex-direction: row-reverse; }
-  .footer-social { flex-direction: row-reverse; }
 
   /* ── Cards ─────────────────────────────────────────────── */
   .testimonial-card::before { left: auto; right: 1.75rem; }
@@ -189,4 +188,41 @@
   margin-right: 0 !important;
   transform-origin: right !important;
 }
+
+/* ── True RTL Navbar Mirroring ──────────────────────────── */
+html[dir="rtl"] .nav-inner,
+[dir="rtl"] .nav-inner {
+  flex-direction: row-reverse !important;
+}
+
+html[dir="rtl"] .nav-menu,
+[dir="rtl"] .nav-menu {
+  flex-direction: row-reverse !important;
+}
+
+html[dir="rtl"] .nav-actions,
+[dir="rtl"] .nav-actions {
+  flex-direction: row-reverse !important;
+}
+
+html[dir="rtl"] .profile-dropdown,
+[dir="rtl"] .profile-dropdown {
+  right: auto !important;
+  left: 0 !important;
+}
+
+/* ── Mobile Menu Close Button Mirroring ─────────────────── */
+html[dir="rtl"] .mobile-menu-close,
+[dir="rtl"] .mobile-menu-close {
+  right: auto !important;
+  left: 2rem !important;
+}
+
+/* ── RTL Footer Social Icons Alignment ──────────────────── */
+html[dir="rtl"] .footer-social,
+[dir="rtl"] .footer-social {
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+}
+
 

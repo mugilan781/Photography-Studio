@@ -2567,7 +2567,7 @@ select.form-control { cursor: pointer; }
 /* ── Responsive overrides ────────────────────────────────── */
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr !important; }
-  .hero > div:last-child { display: none !important; }
+  .hero > div:last-child, .home2-hero-img-wrap { display: none !important; }
   .page-hero { min-height: 52vh; }
 
   .gallery-masonry { grid-template-columns: repeat(2,1fr); }

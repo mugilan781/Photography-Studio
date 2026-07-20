@@ -12,9 +12,9 @@
   .eyebrow-left { flex-direction: row-reverse; justify-content: flex-end; }
 
   /* ── Navbar ────────────────────────────────────────────── */
-  .nav-inner { flex-direction: row-reverse; }
-  .nav-menu { flex-direction: row-reverse; }
-  .nav-actions { flex-direction: row-reverse; }
+  .nav-inner { flex-direction: row; }
+  .nav-menu { flex-direction: row; }
+  .nav-actions { flex-direction: row; }
 
   .nav-dropdown {
     left: auto;
@@ -192,17 +192,17 @@
 /* ── True RTL Navbar Mirroring ──────────────────────────── */
 html[dir="rtl"] .nav-inner,
 [dir="rtl"] .nav-inner {
-  flex-direction: row-reverse !important;
+  flex-direction: row !important;
 }
 
 html[dir="rtl"] .nav-menu,
 [dir="rtl"] .nav-menu {
-  flex-direction: row-reverse !important;
+  flex-direction: row !important;
 }
 
 html[dir="rtl"] .nav-actions,
 [dir="rtl"] .nav-actions {
-  flex-direction: row-reverse !important;
+  flex-direction: row !important;
 }
 
 html[dir="rtl"] .profile-dropdown,

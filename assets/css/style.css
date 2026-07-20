@@ -975,6 +975,12 @@ li:hover > .nav-dropdown {
 }
 .footer-links a:hover::before { opacity: 1; transform: translateX(0); }
 
+/* Standardize footer contact text and newsletter description colors */
+#footer [style*="color:var(--text-secondary)"],
+#footer [style*="color: var(--text-secondary)"] {
+  color: rgba(255, 253, 247, 0.6) !important;
+}
+
 .footer-newsletter input {
   width: 100%;
   padding: 0.875rem 1.25rem;

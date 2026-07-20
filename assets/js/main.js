@@ -193,33 +193,7 @@ if (backToTop) {
   });
 }
 
-// ── Cookie Banner ─────────────────────────────────────────
-const cookieBanner = document.getElementById('cookie-banner');
-const cookieAccept = document.getElementById('cookie-accept');
-const cookieDecline = document.getElementById('cookie-decline');
 
-function initCookieBanner() {
-  if (!cookieBanner) return;
-  if (!localStorage.getItem('lumiere-cookies')) {
-    setTimeout(() => cookieBanner.classList.add('show'), 2000);
-  }
-}
-
-if (cookieAccept) {
-  cookieAccept.addEventListener('click', () => {
-    localStorage.setItem('lumiere-cookies', 'accepted');
-    cookieBanner.classList.remove('show');
-  });
-}
-
-if (cookieDecline) {
-  cookieDecline.addEventListener('click', () => {
-    localStorage.setItem('lumiere-cookies', 'declined');
-    cookieBanner.classList.remove('show');
-  });
-}
-
-initCookieBanner();
 
 // ── Smooth internal links ─────────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

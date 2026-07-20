@@ -262,13 +262,13 @@
 <!-- ══ SECTION 4: CONTACT FORM ════════════════════════════ -->
 <section class="section" style="background:var(--bg-secondary);" id="contact-form">
   <div class="container">
-    <div class="section-header sr">
-      <p class="eyebrow">Send a Message</p>
-      <h2 class="section-title">Have a Question?<br/><em style="font-style:italic;">We're Here to Help</em></h2>
-      <div class="gold-line"></div>
-    </div>
-    <div style="max-width:700px;margin-inline:auto;">
-      <form class="contact-form sr" style="display:flex;flex-direction:column;gap:1.5rem;" aria-label="Contact form">
+    <div class="sr" style="max-width:800px;margin-inline:auto;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-xl);padding:2.5rem;box-shadow:var(--shadow-md);">
+      <div class="section-header" style="margin-bottom:2.5rem;">
+        <p class="eyebrow">Send a Message</p>
+        <h2 class="section-title">Have a Question?<br/><em style="font-style:italic;">We're Here to Help</em></h2>
+        <div class="gold-line"></div>
+      </div>
+      <form class="contact-form" style="display:flex;flex-direction:column;gap:1.5rem;" aria-label="Contact form">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
           <div class="form-group"><label class="form-label" for="cf-name">Full Name *</label><input id="cf-name" class="form-control" type="text" placeholder="Your name" required /></div>
           <div class="form-group"><label class="form-label" for="cf-email">Email Address *</label><input id="cf-email" class="form-control" type="email" placeholder="your@email.com" required /></div>
@@ -291,19 +291,16 @@
 </section>
 
 <!-- ══ SECTION 5: MAP ══════════════════════════════════════ -->
-<section style="height:420px;position:relative;overflow:hidden;">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.654321!2d-73.99355!3d40.75061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af15a81011%3A0x9b8d8b7f6c5c5f7a!2sPenn%20Station%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1234567890"
-    width="100%" height="100%" style="border:0;filter:grayscale(60%) contrast(1.1);"
-    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-    title="AURELLE Studio Location — 42 Meridian Lane, New York">
-  </iframe>
-  <!-- Overlay card -->
-  <div class="glass-card" style="position:absolute;top:50%;left:clamp(1rem,5vw,5rem);transform:translateY(-50%);padding:1.75rem 2rem;background:var(--bg-card);border:1px solid var(--border-color);min-width:240px;">
-    <p style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;">Our Studio</p>
-    <h3 style="font-family:var(--font-serif);font-size:1.25rem;margin-bottom:0.5rem;">AURELLE Studio</h3>
-    <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6;">42 Meridian Lane<br/>New York, NY 10001</p>
-    <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="margin-top:1.25rem;display:inline-flex;">Get Directions</a>
+<section class="section" id="contact-map" style="padding-top:0;">
+  <div class="container sr">
+    <div style="border-radius:var(--radius-xl);overflow:hidden;border:1px solid var(--border-color);height:420px;box-shadow:var(--shadow-md);">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.654321!2d-73.99355!3d40.75061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af15a81011%3A0x9b8d8b7f6c5c5f7a!2sPenn%20Station%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1234567890"
+        width="100%" height="100%" style="border:0;filter:grayscale(60%) contrast(1.1);"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="AURELLE Studio Location — 42 Meridian Lane, New York">
+      </iframe>
+    </div>
   </div>
 </section>
 

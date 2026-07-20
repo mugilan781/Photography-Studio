@@ -57,7 +57,7 @@
     <a href="contact.html">Contact</a>
   </nav>
   <div class="flex gap-2 mt-auto" style="padding-bottom:3rem;">
-    <a href="contact.html" class="btn btn-primary btn-sm">Book a Session</a>
+    <a href="booking.html" class="btn btn-primary btn-sm">Book a Session</a>
   </div>
 </div>
 
@@ -106,7 +106,7 @@
         </div>
       </div>
 
-      <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+      <a href="booking.html" class="btn btn-primary btn-sm">Book Now</a>
 
       <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
@@ -140,7 +140,7 @@
       </div>
       <div class="slide-content-line" style="margin-top:2.25rem;">
         <div class="inner flex gap-2 flex-wrap">
-          <a href="contact.html" class="btn btn-primary btn-lg">Book a Session</a>
+          <a href="booking.html" class="btn btn-primary btn-lg">Book a Session</a>
           <a href="gallery.html" class="btn btn-outline btn-lg">View Gallery</a>
         </div>
       </div>
@@ -544,7 +544,7 @@
       <!-- Mini booking date picker -->
       <div style="display:flex;gap:1rem;align-items:center;justify-content:center;flex-wrap:wrap;margin-bottom:2rem;">
         <input type="date" id="hero-date-picker" class="form-control" style="max-width:200px;background:rgba(255,253,247,0.08);border-color:rgba(212,175,55,0.3);color:var(--ivory);" aria-label="Select a date" />
-        <a href="contact.html" class="btn btn-primary btn-lg" id="hero-book-btn">Check Availability</a>
+        <a href="booking.html" class="btn btn-primary btn-lg" id="hero-book-btn">Check Availability</a>
       </div>
 
       <div class="cta-banner-btns">
@@ -667,7 +667,7 @@
 document.getElementById('hero-date-picker')?.addEventListener('change', function() {
   const btn = document.getElementById('hero-book-btn');
   if (btn && this.value) {
-    btn.href = `contact.html?date=${this.value}`;
+    btn.href = `booking.html?date=${this.value}`;
   }
 });
 </script>

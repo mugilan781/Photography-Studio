@@ -102,18 +102,18 @@
 
 <!-- ══ SECTION 1: ARTICLE HERO ════════════════════════════ -->
 <section style="position:relative;min-height:70vh;display:flex;align-items:flex-end;padding-bottom:4rem;overflow:hidden;background:var(--midnight);" aria-label="Article hero" class="pt-nav">
-  <div style="position:absolute;inset:0;background-image:url('assets/images/blog_cover_1_1784526648219.png');background-size:cover;background-position:center;opacity:0.5;" data-parallax="0.2"></div>
+  <div id="article-hero-bg" style="position:absolute;inset:0;background-image:url('assets/images/blog_cover_1_1784526648219.png');background-size:cover;background-position:center;opacity:0.5;" data-parallax="0.2"></div>
   <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(17,24,39,0.75) 0%,rgba(17,24,39,0.15) 100%);"></div>
   <div class="container" style="position:relative;z-index:2;">
-    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html" style="color:rgba(255,253,247,0.6);">Home</a><span class="breadcrumb-sep">›</span><a href="blog.html" style="color:rgba(255,253,247,0.6);">Journal</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Studio Lighting</span></nav>
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html" style="color:rgba(255,253,247,0.6);">Home</a><span class="breadcrumb-sep">›</span><a href="blog.html" style="color:rgba(255,253,247,0.6);">Journal</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current" id="breadcrumb-article-title">Studio Lighting</span></nav>
     <div style="max-width:740px;margin-top:1.25rem;">
       <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.25rem;">
-        <span class="badge">Studio Tips</span>
-        <span style="font-size:0.8rem;color:rgba(255,253,247,0.5);">December 12, 2024</span>
-        <span style="font-size:0.8rem;color:rgba(255,253,247,0.5);">8 min read</span>
+        <span class="badge" id="article-badge">Studio Tips</span>
+        <span style="font-size:0.8rem;color:rgba(255,253,247,0.5);" id="article-date">December 12, 2024</span>
+        <span style="font-size:0.8rem;color:rgba(255,253,247,0.5);" id="article-read-time">8 min read</span>
       </div>
-      <h1 style="font-family:var(--font-serif);font-size:clamp(2rem,5vw,3.5rem);color:var(--ivory);font-weight:400;line-height:1.15;margin-bottom:1.25rem;">The Science of Perfect<br/><em style="color:var(--gold);">Studio Lighting</em></h1>
-      <p style="color:rgba(255,253,247,0.7);font-size:1.125rem;line-height:1.8;max-width:600px;">How we achieve those signature cinematic shadows and dramatic highlights that define the AURELLE aesthetic — and the principles behind every great portrait.</p>
+      <h1 id="article-title" style="font-family:var(--font-serif);font-size:clamp(2rem,5vw,3.5rem);color:var(--ivory);font-weight:400;line-height:1.15;margin-bottom:1.25rem;">The Science of Perfect<br/><em style="color:var(--gold);">Studio Lighting</em></h1>
+      <p id="article-description" style="color:rgba(255,253,247,0.7);font-size:1.125rem;line-height:1.8;max-width:600px;">How we achieve those signature cinematic shadows and dramatic highlights that define the AURELLE aesthetic — and the principles behind every great portrait.</p>
     </div>
   </div>
 </section>
@@ -121,7 +121,7 @@
 <!-- ══ SECTION 2: ARTICLE CONTENT ════════════════════════ -->
 <section class="section">
   <div class="container">
-    <div class="article-body sr">
+    <div class="article-body sr" id="article-content">
       <p>Light is the language of photography. Before the subject, before the composition, before the edit — light determines everything. At AURELLE Studio, we have spent over a decade obsessively studying, experimenting with, and mastering studio light in all its forms. This article shares the core principles that underpin every single portrait we create.</p>
 
       <h2>Understanding Light Quality: Hard vs. Soft</h2>
@@ -144,13 +144,18 @@
       <p>For our signature editorial portrait look, we use a modified Rembrandt setup with a large 7-foot silver parabolic reflector as the main light, positioned at approximately 45° above and to the side of the subject at a distance of 6–8 feet. This creates beautiful specular highlights in the eyes while maintaining dramatic shadow falloff.</p>
       <p>We then add a subtle fill card — a large white foam board — on the opposite side to control the shadow-to-highlight ratio, keeping it at approximately 3:1 for our standard portrait look. A rim light (a gridded strip light behind and above the subject) adds separation from the background and a subtle luminous halo to the hair.</p>
     </div>
+    <!-- Previous / Next Article navigation -->
+    <div style="max-width: 720px; margin: 3rem auto 0; display: flex; justify-content: space-between; border-top: 1px solid var(--border-color); padding-top: 1.5rem;" id="article-navigation">
+      <a id="nav-prev-article" href="#" style="color: var(--gold); display: flex; align-items: center; gap: 0.5rem; font-family: var(--font-serif); font-size: 1.1rem; transition: color 0.2s;">← Previous Article</a>
+      <a id="nav-next-article" href="#" style="color: var(--gold); display: flex; align-items: center; gap: 0.5rem; font-family: var(--font-serif); font-size: 1.1rem; transition: color 0.2s;">Next Article →</a>
+    </div>
   </div>
 </section>
 
 <!-- ══ SECTION 3: INLINE IMAGE GALLERY ════════════════════ -->
 <section style="padding-bottom:var(--section-py);">
   <div class="container">
-    <div class="grid sr" style="grid-template-columns:2fr 1fr 1fr;gap:1rem;">
+    <div class="grid sr" style="grid-template-columns:2fr 1fr 1fr;gap:1rem;" id="article-gallery-grid">
       <div class="img-overlay-wrap" style="border-radius:var(--radius-lg);aspect-ratio:4/3;" data-lightbox="assets/images/portfolio_portrait_1_1784526541387.png" data-caption="Example of Rembrandt lighting — sharp shadows, dramatic depth">
         <img src="assets/images/portfolio_portrait_1_1784526541387.png" alt="Rembrandt lighting example" loading="lazy" />
         <div class="gallery-item-overlay"><div class="gallery-zoom-icon">⤢</div></div>
@@ -164,7 +169,7 @@
         <div class="gallery-item-overlay"><div class="gallery-zoom-icon">⤢</div></div>
       </div>
     </div>
-    <p style="text-align:center;font-size:0.8rem;color:var(--text-muted);margin-top:1rem;font-style:italic;">Left to right: Rembrandt lighting, split lighting example, studio setup overview</p>
+    <p id="article-gallery-caption" style="text-align:center;font-size:0.8rem;color:var(--text-muted);margin-top:1rem;font-style:italic;">Left to right: Rembrandt lighting, split lighting example, studio setup overview</p>
   </div>
 </section>
 
@@ -176,14 +181,14 @@
   <div class="container">
     <div class="sr" style="max-width:720px;margin-inline:auto;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-xl);padding:2.5rem;display:flex;gap:2rem;align-items:center;">
       <div style="width:100px;height:100px;border-radius:50%;overflow:hidden;border:3px solid var(--gold);flex-shrink:0;">
-        <img src="assets/images/about_photographer_1784526634105.png" alt="Sophia Laurent" style="width:100%;height:100%;object-fit:cover;object-position:top;" />
+        <img id="author-image" src="assets/images/about_photographer_1784526634105.png" alt="Sophia Laurent" style="width:100%;height:100%;object-fit:cover;object-position:top;" />
       </div>
       <div>
         <p style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">Written by</p>
-        <h3 style="font-family:var(--font-serif);font-size:1.5rem;margin-bottom:0.5rem;">Sophia Laurent</h3>
-        <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.7;margin-bottom:1rem;">Founder & Lead Photographer at AURELLE Studio. Award-winning portrait artist with 12+ years of experience. Speaker at PPA, WPPI, and PhotoPlus.</p>
+        <h3 id="author-name" style="font-family:var(--font-serif);font-size:1.5rem;margin-bottom:0.5rem;">Sophia Laurent</h3>
+        <p id="author-bio" style="font-size:0.875rem;color:var(--text-secondary);line-height:1.7;margin-bottom:1rem;">Founder & Lead Photographer at AURELLE Studio. Award-winning portrait artist with 12+ years of experience. Speaker at PPA, WPPI, and PhotoPlus.</p>
         <div class="flex gap-2">
-          <a href="about.html" class="btn btn-outline btn-sm">About Sophia</a>
+          <a id="author-link" href="about.html" class="btn btn-outline btn-sm">About Sophia</a>
           <a href="#" class="btn btn-sm" style="border:1px solid var(--border-color);color:var(--text-muted);display:inline-flex;align-items:center;gap:0.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg> Instagram</a>
         </div>
       </div>
@@ -199,7 +204,7 @@
       <h2 class="section-title">Related<br/><em style="font-style:italic;">Articles</em></h2>
       <div class="gold-line"></div>
     </div>
-    <div class="grid sr-stagger" style="grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+    <div class="grid sr-stagger" style="grid-template-columns:repeat(3,1fr);gap:1.5rem;" id="article-related-grid">
       <article class="sr blog-card">
         <div class="blog-card-img"><img src="assets/images/blog_cover_2_1784526668707.png" alt="Camera lens guide" loading="lazy" /></div>
         <div class="blog-card-body">
@@ -372,6 +377,7 @@
 
 <button id="back-to-top" aria-label="Back to top">↑</button>
 
+<script src="assets/js/blog-details.js"></script>
 <script src="assets/js/main.js" defer></script>
 <script src="assets/js/gallery.js" defer></script>
 </body>

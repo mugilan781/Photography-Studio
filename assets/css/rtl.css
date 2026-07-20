@@ -9,7 +9,7 @@
 
   /* ── Eyebrow ───────────────────────────────────────────── */
   .eyebrow { flex-direction: row-reverse; }
-  .eyebrow-left { flex-direction: row-reverse; justify-content: flex-end; }
+  .eyebrow-left { flex-direction: row !important; justify-content: flex-start !important; }
 
   /* ── Navbar ────────────────────────────────────────────── */
   .nav-inner { flex-direction: row; }
@@ -54,10 +54,14 @@
 
   /* ── Pricing ───────────────────────────────────────────── */
   .pricing-features li { flex-direction: row-reverse; }
+  .pricing-card.featured {
+    overflow: hidden !important;
+  }
   .pricing-card.featured::before {
-    right: auto;
-    left: -2.25rem;
-    transform: rotate(-45deg);
+    right: auto !important;
+    left: -2.25rem !important;
+    top: 1.5rem !important;
+    transform: rotate(-45deg) !important;
   }
 
   /* ── FAQ ───────────────────────────────────────────────── */
@@ -78,6 +82,18 @@
   .lightbox-prev { left: auto; right: 1.5rem; }
   .lightbox-next { right: auto; left: 1.5rem; }
 
+  /* ── Testimonials Slider ────────────────────────────────── */
+  .testimonials-carousel {
+    transform: scaleX(-1) !important;
+  }
+  .testimonial-card {
+    transform: scaleX(-1) !important;
+    text-align: right !important;
+  }
+  .testimonial-card:hover {
+    transform: scaleX(-1) translateY(-4px) !important;
+  }
+
   /* ── Back to Top ───────────────────────────────────────── */
   #back-to-top { right: auto; left: 2rem; }
 
@@ -85,7 +101,11 @@
   .mobile-menu nav { align-items: flex-end; }
 
   /* ── Gold Divider ──────────────────────────────────────── */
-  .gold-line-left { background: linear-gradient(270deg, var(--gold), transparent); }
+  .gold-line-left {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    background: linear-gradient(270deg, var(--gold), transparent) !important;
+  }
 
   /* ── Logo Sub ──────────────────────────────────────────── */
   .nav-logo .logo-sub { letter-spacing: 0.1em; }

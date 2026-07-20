@@ -2633,6 +2633,12 @@ html[data-theme="light"] .pillar-icon {
   color: var(--ivory);
 }
 
+/* Scoped override for contact and booking page date input calendar icon in Light Mode */
+html[data-theme="light"] #booking input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0);
+}
+
+
 /* Scoped overrides to improve contrast of badges on blog covers */
 .blog-card-img .badge {
   background: rgba(12, 16, 23, 0.9) !important;

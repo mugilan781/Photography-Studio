@@ -1665,7 +1665,7 @@ li:hover > .nav-dropdown {
 .cta-banner-btns .btn-outline:hover {
   background: var(--gold);
   border-color: var(--gold);
-  color: var(--midnight);
+  color: #000;
 }
 
 /* ── Contact Info Card ───────────────────────────────────── */
@@ -2222,13 +2222,14 @@ li:hover > .nav-dropdown {
   letter-spacing: 0.03em;
 }
 .filter-tab:hover {
+  background: var(--gold);
   border-color: var(--gold);
-  color: var(--gold);
+  color: #000;
 }
 .filter-tab.active {
   background: var(--gold);
   border-color: var(--gold);
-  color: var(--midnight);
+  color: #000;
   box-shadow: 0 4px 16px rgba(212,175,55,0.3);
 }
 

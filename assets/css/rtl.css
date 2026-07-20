@@ -120,20 +120,44 @@
   margin-right: auto !important;
 }
 
-[dir="rtl"] .hero-slider .slider-prev {
-  font-size: 0 !important;
-}
-[dir="rtl"] .hero-slider .slider-prev::before {
-  content: '→';
-  font-size: 1rem;
-}
-
+[dir="rtl"] .hero-slider .slider-prev,
 [dir="rtl"] .hero-slider .slider-next {
   font-size: 0 !important;
+  position: relative;
 }
-[dir="rtl"] .hero-slider .slider-next::before {
+
+[dir="rtl"] .hero-slider .slider-prev::after {
+  content: '→';
+  color: var(--ivory) !important;
+  font-size: 1rem !important;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-fast);
+  z-index: 2;
+}
+
+[dir="rtl"] .hero-slider .slider-prev:hover::after {
+  color: var(--gold) !important;
+}
+
+[dir="rtl"] .hero-slider .slider-next::after {
   content: '←';
-  font-size: 1rem;
+  color: var(--ivory) !important;
+  font-size: 1rem !important;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-fast);
+  z-index: 2;
+}
+
+[dir="rtl"] .hero-slider .slider-next:hover::after {
+  color: var(--gold) !important;
 }
 
 /* ── Home 2 Hero Layout Mirroring (RTL Only) ────────────── */

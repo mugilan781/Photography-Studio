@@ -2049,6 +2049,7 @@ li:hover > .nav-dropdown {
   border-color: var(--gold);
   box-shadow: 0 0 0 1px var(--gold), var(--shadow-gold);
   position: relative;
+  overflow: visible;
 }
 .pricing-card.featured::before {
   content: '✦ Most Popular';

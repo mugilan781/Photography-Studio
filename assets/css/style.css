@@ -2626,3 +2626,8 @@ select.form-control { cursor: pointer; }
     grid-template-columns: 1fr !important;
   }
 }
+
+/* Scoped light theme override for About page philosophy icons */
+html[data-theme="light"] .pillar-icon {
+  color: var(--ivory);
+}

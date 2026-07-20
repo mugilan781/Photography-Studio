@@ -850,7 +850,7 @@ li:hover > .nav-dropdown {
 .page-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(17,24,39,0.9) 0%, rgba(17,24,39,0.3) 100%);
+  background: linear-gradient(to top, rgba(17,24,39,0.75) 0%, rgba(17,24,39,0.15) 100%);
 }
 
 .page-hero-content {

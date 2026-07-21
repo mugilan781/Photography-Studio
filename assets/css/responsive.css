@@ -761,3 +761,37 @@
   padding-right: 1rem !important;
   padding-left: 2.75rem !important;
 }
+
+/* ── Extra Small Mobile Viewports (< 375px) ──────────────── */
+@media (max-width: 375px) {
+  #navbar .nav-inner {
+    padding-inline: 0.85rem !important;
+    gap: 0.35rem !important;
+  }
+  .nav-actions {
+    gap: 0.45rem !important;
+  }
+  .nav-logo .logo-main {
+    font-size: 1.05rem !important;
+  }
+  .nav-logo .logo-sub {
+    font-size: 0.4rem !important;
+    letter-spacing: 0.12em !important;
+  }
+  .theme-btn,
+  .profile-btn {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 0.75rem !important;
+  }
+  .lang-btn {
+    height: 28px !important;
+    padding-inline: 0.35rem !important;
+    font-size: 0.6rem !important;
+  }
+  .hamburger {
+    width: 36px !important;
+    height: 36px !important;
+    padding: 8px !important;
+  }
+}

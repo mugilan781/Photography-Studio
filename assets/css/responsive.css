@@ -928,3 +928,40 @@
     padding-inline: 1rem !important;
   }
 }
+
+/* ── Hamburger Menu: Global & Stacking overrides ────────── */
+#navbar.drawer-open {
+  z-index: 1005 !important;
+}
+
+.hamburger {
+  position: relative !important;
+  z-index: 1010 !important;
+}
+
+/* Make hamburger spans thicker and more premium */
+.hamburger span {
+  height: 2.25px !important;
+  border-radius: 2px !important;
+}
+
+/* Ensure perfect X alignment with thicker spans */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg) !important;
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0 !important;
+  transform: scaleX(0) !important;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg) !important;
+}
+
+/* Contrast overrides for transparent, scrolled, and open drawer states */
+#navbar.transparent .hamburger span {
+  background: var(--ivory) !important;
+}
+#navbar.transparent .hamburger.open span,
+.hamburger.open span {
+  background: var(--text-primary) !important;
+}

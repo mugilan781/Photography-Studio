@@ -69,6 +69,7 @@ function toggleDrawer(open) {
   const isOpen = open !== undefined ? open : !drawer.classList.contains('open');
   hamburger.classList.toggle('open', isOpen);
   drawer.classList.toggle('open', isOpen);
+  if (navbar) navbar.classList.toggle('drawer-open', isOpen);
   document.body.style.overflow = isOpen ? 'hidden' : '';
   hamburger.setAttribute('aria-expanded', isOpen);
 }

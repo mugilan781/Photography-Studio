@@ -802,3 +802,46 @@
     padding: 8px !important;
   }
 }
+
+/* ── Gallery Page: Featured Collections Grid (Tablet/Mobile) ── */
+@media (max-width: 991px) {
+  .collection-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+}
+
+/* ── Gallery Page & CTA Banner Mobile Scaling ──────────────── */
+@media (max-width: 767px) {
+  .collection-featured {
+    aspect-ratio: auto !important;
+    min-height: 240px !important;
+  }
+  .collection-featured-content {
+    padding: 1.25rem !important;
+  }
+  .collection-featured-title {
+    font-size: 1.35rem !important;
+  }
+  .collection-featured-desc {
+    font-size: 0.8rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .cta-banner {
+    padding: 2.5rem 1.25rem !important;
+  }
+  .cta-banner-btns {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.875rem !important;
+    width: 100% !important;
+  }
+  .cta-banner-btns .btn {
+    width: 100% !important;
+    max-width: 280px !important;
+    text-align: center !important;
+    white-space: normal !important;
+    padding-inline: 1rem !important;
+  }
+}

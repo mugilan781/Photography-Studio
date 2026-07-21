@@ -965,3 +965,11 @@
 .hamburger.open span {
   background: var(--text-primary) !important;
 }
+
+/* Hide other header items when drawer is open, leaving only the close X icon */
+#navbar.drawer-open .nav-logo,
+#navbar.drawer-open .nav-actions > *:not(.hamburger) {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity var(--transition-fast) !important;
+}

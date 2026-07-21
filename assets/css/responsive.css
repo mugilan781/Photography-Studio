@@ -155,13 +155,17 @@
   .home2-hero-img-wrap {
     display: block !important;
     width: 100% !important;
+    height: 100% !important;
   }
   .home2-hero-img-wrap img {
-    object-position: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
     opacity: 0.4 !important;
   }
   .home2-hero-img-wrap > div[style*="linear-gradient"] {
-    background: linear-gradient(to top, rgba(17,24,39,0.75) 0%, rgba(17,24,39,0.15) 100%) !important;
+    background: linear-gradient(to top, rgba(17,24,39,0.85) 0%, rgba(17,24,39,0.45) 60%, rgba(17,24,39,0.2) 100%) !important;
   }
 
   /* ── Pricing featured badge: contain inside card ────────── */
@@ -181,11 +185,14 @@
     width: auto !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
+    overflow: visible !important;
   }
-  .pricing-card .btn.w-full {
+  .pricing-card .btn {
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
+    white-space: normal !important;
+    padding-inline: 1rem !important;
   }
 
   /* ── Fix: absolute elements with negative right ────────── */
@@ -462,7 +469,7 @@
 
   /* ── Home 2 overlay: match About page gradient (tablet) ── */
   .home2-hero-img-wrap > div[style*="linear-gradient"] {
-    background: linear-gradient(to top, rgba(17,24,39,0.75) 0%, rgba(17,24,39,0.15) 100%) !important;
+    background: linear-gradient(to top, rgba(17,24,39,0.85) 0%, rgba(17,24,39,0.45) 60%, rgba(17,24,39,0.2) 100%) !important;
   }
   .home2-hero-img-wrap .glass-card {
     display: none !important;

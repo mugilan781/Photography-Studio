@@ -47,7 +47,7 @@ if (navbar) {
 }
 
 // Active nav link
-const navLinks = document.querySelectorAll('.nav-menu a, .mobile-menu nav a');
+const navLinks = document.querySelectorAll('.nav-menu a, .drawer-nav a');
 let currentPath = window.location.pathname.split('/').pop() || 'index.html';
 if (currentPath === '') currentPath = 'index.html';
 navLinks.forEach(link => {
@@ -59,26 +59,26 @@ navLinks.forEach(link => {
   }
 });
 
-// ── Mobile Menu ───────────────────────────────────────────
+// ── Drawer ────────────────────────────────────────────────
 const hamburger = document.querySelector('.hamburger');
-const mobileMenu = document.querySelector('.mobile-menu');
-const mobileMenuClose = document.querySelector('.mobile-menu-close');
+const drawer = document.getElementById('drawer');
+const drawerOverlay = document.querySelector('.drawer-overlay');
 
-function toggleMobileMenu(open) {
-  if (!hamburger || !mobileMenu) return;
-  const isOpen = open !== undefined ? open : !mobileMenu.classList.contains('open');
+function toggleDrawer(open) {
+  if (!hamburger || !drawer) return;
+  const isOpen = open !== undefined ? open : !drawer.classList.contains('open');
   hamburger.classList.toggle('open', isOpen);
-  mobileMenu.classList.toggle('open', isOpen);
+  drawer.classList.toggle('open', isOpen);
   document.body.style.overflow = isOpen ? 'hidden' : '';
   hamburger.setAttribute('aria-expanded', isOpen);
 }
 
-if (hamburger) hamburger.addEventListener('click', () => toggleMobileMenu());
-if (mobileMenuClose) mobileMenuClose.addEventListener('click', () => toggleMobileMenu(false));
+if (hamburger) hamburger.addEventListener('click', () => toggleDrawer());
+if (drawerOverlay) drawerOverlay.addEventListener('click', () => toggleDrawer(false));
 
-// Close mobile menu on link click
-document.querySelectorAll('.mobile-menu nav a').forEach(link => {
-  link.addEventListener('click', () => toggleMobileMenu(false));
+// Close drawer on nav link click
+document.querySelectorAll('.drawer-nav a').forEach(link => {
+  link.addEventListener('click', () => toggleDrawer(false));
 });
 
 // ── Theme (Light / Dark) ──────────────────────────────────
@@ -418,3 +418,9 @@ function debounce(fn, delay) {
 
 window.AURELLEUtils = { debounce, animateCounter };
 
+// Close drawer on ESC key press
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && drawer?.classList.contains('open')) {
+    toggleDrawer(false);
+  }
+});

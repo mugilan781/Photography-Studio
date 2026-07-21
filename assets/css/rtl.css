@@ -97,8 +97,15 @@
   /* ── Back to Top ───────────────────────────────────────── */
   #back-to-top { right: auto; left: 2rem; }
 
-  /* ── Mobile Menu ───────────────────────────────────────── */
-  .mobile-menu nav { align-items: flex-end; }
+  /* ── Drawer RTL ────────────────────────────────────────── */
+  .drawer-panel {
+    right: auto !important;
+    left: 0 !important;
+    transform: translateX(-100%) !important;
+  }
+  .drawer.open .drawer-panel {
+    transform: translateX(0) !important;
+  }
 
   /* ── Gold Divider ──────────────────────────────────────── */
   .gold-line-left {
@@ -229,13 +236,6 @@ html[dir="rtl"] .profile-dropdown,
 [dir="rtl"] .profile-dropdown {
   right: auto !important;
   left: 0 !important;
-}
-
-/* ── Mobile Menu Close Button Mirroring ─────────────────── */
-html[dir="rtl"] .mobile-menu-close,
-[dir="rtl"] .mobile-menu-close {
-  right: auto !important;
-  left: 2rem !important;
 }
 
 /* ── RTL Footer Social Icons Alignment ──────────────────── */

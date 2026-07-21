@@ -809,6 +809,24 @@
     grid-template-columns: 1fr !important;
     gap: 1.5rem !important;
   }
+
+  /* ── Blog Page: Featured Post Grid Collapsing ──────────── */
+  .blog-featured-card {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+  }
+  .blog-featured-img-wrap {
+    height: 300px !important;
+    width: 100% !important;
+  }
+  .blog-featured-img-wrap img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+  .blog-featured-content {
+    padding: 2.5rem 2rem !important;
+  }
 }
 
 /* ── Gallery Page & CTA Banner Mobile Scaling ──────────────── */
@@ -843,5 +861,20 @@
     text-align: center !important;
     white-space: normal !important;
     padding-inline: 1rem !important;
+  }
+
+  /* ── Blog Page: Featured Post Mobile scaling ───────────── */
+  .blog-featured-img-wrap {
+    height: 220px !important;
+  }
+  .blog-featured-content {
+    padding: 2rem 1.25rem !important;
+  }
+  .blog-featured-title {
+    font-size: 1.5rem !important;
+  }
+  .blog-featured-desc {
+    font-size: 0.875rem !important;
+    margin-bottom: 1.5rem !important;
   }
 }

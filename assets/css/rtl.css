@@ -99,12 +99,11 @@
 
   /* ── Drawer RTL ────────────────────────────────────────── */
   .drawer-panel {
-    left: 0 !important;
+    left: -100% !important;
     right: auto !important;
-    transform: translateX(-100%) !important;
   }
   .drawer.open .drawer-panel {
-    transform: translateX(0) !important;
+    left: 0 !important;
   }
 
   /* ── Gold Divider ──────────────────────────────────────── */

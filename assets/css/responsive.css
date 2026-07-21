@@ -44,19 +44,16 @@
 
   /* ── Header & Navigation (target height 72px) ────────── */
   #navbar {
-    padding: 1.05rem 0 !important;
     width: 100% !important;
     max-width: 100% !important;
     left: 0 !important;
+    right: auto !important;
     margin: 0 !important;
     box-sizing: border-box !important;
   }
-  #navbar.scrolled {
-    padding: 1.05rem 0 !important;
-  }
   #navbar .nav-inner {
-    max-width: 100% !important;
     width: 100% !important;
+    max-width: 100% !important;
     padding-inline: 1.75rem !important;
     box-sizing: border-box !important;
     gap: 0.75rem !important;
@@ -66,6 +63,29 @@
   }
   .hamburger {
     display: flex !important;
+    width: 44px !important;
+    height: 44px !important;
+    padding: 10px !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .hamburger span {
+    display: block !important;
+    width: 24px !important;
+    height: 1.5px !important;
+    background: var(--text-primary) !important;
+  }
+  .hamburger.open span {
+    display: none !important;
+  }
+  .hamburger.open::after {
+    content: "✕" !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.35rem !important;
+    line-height: 1 !important;
+    color: var(--text-primary) !important;
   }
   .nav-actions {
     gap: 0.75rem !important;
@@ -85,39 +105,31 @@
     padding-inline: 0.55rem !important;
     font-size: 0.7rem !important;
   }
-  /* 44×44 touch target | 24×24 centered icon */
-  .hamburger {
-    width: 44px !important;
-    height: 44px !important;
-    padding: 10px !important;
-    gap: 5px !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-  .hamburger span {
-    width: 24px !important;
-    height: 1.5px !important;
-  }
-  .hamburger.open span:nth-child(1) {
-    transform: translateY(6.5px) rotate(45deg) !important;
-  }
-  .hamburger.open span:nth-child(2) {
-    opacity: 0 !important;
-  }
-  .hamburger.open span:nth-child(3) {
-    transform: translateY(-6.5px) rotate(-45deg) !important;
-  }
 
   /* ── Hero CTA buttons: stack vertically at tablet ──────── */
   .hero-slider .slide-content-line .flex.flex-wrap {
+    display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    gap: 1rem !important;
+    gap: 16px !important;
+    width: 100% !important;
   }
   .hero-slider .slide-content-line .flex.flex-wrap .btn {
     width: 100% !important;
     max-width: 300px !important;
     text-align: center !important;
+  }
+
+  /* ── Hero: constrain absolutely positioned children ────── */
+  .hero-slider > [style*="position:absolute"],
+  .hero-slider > [style*="position: absolute"] {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .hero-slider .container[style*="position:absolute"],
+  .hero-slider .container[style*="position: absolute"] {
+    max-width: 100% !important;
+    padding-inline: 0 !important;
   }
 
   /* ── Floating card: anchor inside image, prevent overflow ── */
@@ -139,12 +151,15 @@
     padding-top: 80px !important;
   }
 
-  /* ── Home 2 hero: image cover behaviour at tablet ──────── */
+  /* ── Home 2 hero: full-width image at tablet ──────────── */
+  .home2-hero-img-wrap {
+    display: block !important;
+    width: 100% !important;
+  }
   .home2-hero-img-wrap img {
     object-position: center !important;
+    opacity: 0.4 !important;
   }
-
-  /* ── Home 2 overlay: match About page gradient at tablet ── */
   .home2-hero-img-wrap > div[style*="linear-gradient"] {
     background: linear-gradient(to top, rgba(17,24,39,0.75) 0%, rgba(17,24,39,0.15) 100%) !important;
   }
@@ -159,6 +174,18 @@
     border-radius: 100px !important;
     white-space: nowrap !important;
     font-size: 0.65rem !important;
+  }
+
+  /* ── Pricing cards: contain overflow ──────────────────── */
+  .pricing-card {
+    width: auto !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .pricing-card .btn.w-full {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   /* ── Fix: absolute elements with negative right ────────── */
@@ -260,7 +287,7 @@
 .drawer-panel {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -100%;
   left: auto;
   bottom: 0;
   width: min(85vw, 360px);
@@ -273,13 +300,12 @@
   align-items: center;
   gap: 0;
   padding: 90px 2rem 3rem;
-  transform: translateX(100%);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   overflow-y: auto;
+  transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .drawer.open .drawer-panel {
-  transform: translateX(0);
+  right: 0;
 }
 
 .drawer-header {
@@ -434,11 +460,7 @@
     text-align: center;
   }
 
-  /* ── Home 2 Hero: full-width image with dark overlay ──── */
-  .home2-hero-img-wrap {
-    display: block !important;
-    width: 100% !important;
-  }
+  /* ── Home 2 overlay: match About page gradient (tablet) ── */
   .home2-hero-img-wrap > div[style*="linear-gradient"] {
     background: linear-gradient(to top, rgba(17,24,39,0.75) 0%, rgba(17,24,39,0.15) 100%) !important;
   }
@@ -488,18 +510,15 @@
   #navbar {
     padding: 1rem 0 !important;
   }
-  #navbar.scrolled {
-    padding: 1rem 0 !important;
-  }
   #navbar .nav-inner {
     gap: 0.5rem !important;
     padding-inline: 1.25rem !important;
   }
   .nav-logo .logo-main {
-    font-size: 1.25rem !important;
+    font-size: 1.15rem !important;
   }
   .nav-logo .logo-sub {
-    font-size: 0.5rem !important;
+    font-size: 0.45rem !important;
     letter-spacing: 0.15em !important;
   }
   .nav-actions {
@@ -516,30 +535,6 @@
     height: 32px !important;
     padding-inline: 0.45rem !important;
     font-size: 0.65rem !important;
-  }
-  .nav-actions .btn-primary {
-    display: none !important;
-  }
-  .hamburger {
-    width: 44px !important;
-    height: 44px !important;
-    padding: 10px !important;
-    gap: 5px !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-  .hamburger span {
-    width: 24px !important;
-    height: 1.5px !important;
-  }
-  .hamburger.open span:nth-child(1) {
-    transform: translateY(6.5px) rotate(45deg) !important;
-  }
-  .hamburger.open span:nth-child(2) {
-    opacity: 0 !important;
-  }
-  .hamburger.open span:nth-child(3) {
-    transform: translateY(-6.5px) rotate(-45deg) !important;
   }
   .drawer-panel {
     width: min(85vw, 320px) !important;

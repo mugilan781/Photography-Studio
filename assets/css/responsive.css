@@ -927,6 +927,27 @@
     white-space: normal !important;
     padding-inline: 1rem !important;
   }
+
+  /* ── Author Bio Mobile scaling ───────────────────────────── */
+  .author-card {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+    padding: 1.75rem 1.25rem !important;
+    gap: 1.25rem !important;
+  }
+  .author-card-btns {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 0.75rem !important;
+  }
+  .author-card-btns a {
+    width: 100% !important;
+    max-width: 240px !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
 }
 
 /* ── Hamburger Menu: Global & Stacking overrides ────────── */

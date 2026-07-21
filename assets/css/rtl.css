@@ -99,8 +99,8 @@
 
   /* ── Drawer RTL ────────────────────────────────────────── */
   .drawer-panel {
-    right: auto !important;
     left: 0 !important;
+    right: auto !important;
     transform: translateX(-100%) !important;
   }
   .drawer.open .drawer-panel {

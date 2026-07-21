@@ -973,3 +973,17 @@
   pointer-events: none !important;
   transition: opacity var(--transition-fast) !important;
 }
+
+/* ── Audited Image Scaling Overrides ─────────────────────── */
+/* Force full-height scaling for the 5 portrait-aspect sections */
+.img-overlay-wrap.img-reveal[style*="aspect-ratio:4/5"] img,
+.img-overlay-wrap.img-reveal[style*="aspect-ratio: 4/5"] img,
+.sr-right .img-overlay-wrap[style*="aspect-ratio:3/4"] img,
+.sr-right .img-overlay-wrap[style*="aspect-ratio: 3/4"] img,
+#studio .img-overlay-wrap img,
+#outdoor .img-overlay-wrap img,
+#article-gallery-grid .img-overlay-wrap[style*="aspect-ratio:3/4"] img,
+#article-gallery-grid .img-overlay-wrap[style*="aspect-ratio: 3/4"] img {
+  height: 100% !important;
+  object-fit: cover !important;
+}

@@ -2657,3 +2657,44 @@ html[data-theme="light"] #booking input[type="date"]::-webkit-calendar-picker-in
   background: rgba(12, 16, 23, 0.9) !important;
   border-color: rgba(216, 167, 177, 0.4) !important;
 }
+
+/* ── Home 2: Specialty Showcase ("Every Moment Deserves Artistry") Readability Overrides ── */
+#specialty-grid .sr > div[style*="linear-gradient"] {
+  background: linear-gradient(to top, rgba(10, 12, 18, 0.88) 0%, rgba(10, 12, 18, 0.3) 50%, transparent 100%) !important;
+  z-index: 1;
+}
+#specialty-grid .sr > div:last-child {
+  z-index: 2;
+}
+#specialty-grid .sr > div:last-child * {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* ── Gallery: Featured Albums ("Featured Albums") Readability Overrides ── */
+.collection-grid .sr > div[style*="linear-gradient"] {
+  background: linear-gradient(to top, rgba(10, 12, 18, 0.88) 0%, rgba(10, 12, 18, 0.3) 50%, transparent 100%) !important;
+  z-index: 1;
+}
+.collection-grid .sr > div:last-child {
+  z-index: 2;
+}
+.collection-grid .sr > div:last-child * {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* ── Gallery: Featured Albums Badge Readability Overrides ── */
+.collection-grid .badge {
+  background: rgba(16, 22, 34, 0.9) !important;
+  border: 1px solid rgba(212, 175, 55, 0.28) !important;
+  color: var(--gold) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22) !important;
+}
+
+.collection-grid .badge-rose {
+  border-color: rgba(216, 167, 177, 0.28) !important;
+  color: var(--rose) !important;
+}
+
+

@@ -471,6 +471,7 @@
   .home2-hero-img-wrap > div[style*="linear-gradient"] {
     background: linear-gradient(to top, rgba(17,24,39,0.85) 0%, rgba(17,24,39,0.45) 60%, rgba(17,24,39,0.2) 100%) !important;
   }
+  .home2-hero-badge,
   .home2-hero-img-wrap .glass-card {
     display: none !important;
   }

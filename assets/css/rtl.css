@@ -195,6 +195,7 @@
   background: linear-gradient(to right, transparent 60%, var(--midnight)) !important;
 }
 
+[dir="rtl"] .home2-hero-badge,
 [dir="rtl"] .home2-hero-img-wrap .glass-card {
   right: auto !important;
   left: 3rem !important;
